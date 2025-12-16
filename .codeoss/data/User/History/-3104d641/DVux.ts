@@ -54,6 +54,12 @@ export const BLOG_POSTS: BlogPost[] = [
 ];
 
 export const SERVICES: Service[] = [
+    { title: "Integrative Whole Self Coaching", icon: "favorite_border" },
+    { title: "Somatic Experiencing™ Practices", icon: "psychology" },
+    { title: "Awakened and Regulated Leadership Coaching", icon: "security" },
+    { title: "Spiritual Emergence Integration", icon: "visibility" },
+    { title: "Reiki Energy Balancing Attunement Services", icon: "north" },
+    { title: "Consulting and Speaking Services", icon: "work_outline" },
     {
         title: "Integrative Whole Self Coaching",
         description: "Stuck in life, your career, or in a life transition? This one-on-one signature coaching offering guides you to regulate your nervous system, recover from stress and trauma, and reconnect you with your Authentic Self. Using cutting-edge neuroscience, somatic practices, and ancient holistic wisdom.",

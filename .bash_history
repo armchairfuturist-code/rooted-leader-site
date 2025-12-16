@@ -86,3 +86,11 @@ git push -u origin main
 rm -rf .git
 git init
 cat .gitignore
+git add .
+git commit -m "Fresh start"
+git branch -M main
+git remote add origin https://github.com/armchairfuturist-code/rooted-leader-site.git
+git push -u origin main --force
+cd the-rooted-leader
+git pull
+yarn dev

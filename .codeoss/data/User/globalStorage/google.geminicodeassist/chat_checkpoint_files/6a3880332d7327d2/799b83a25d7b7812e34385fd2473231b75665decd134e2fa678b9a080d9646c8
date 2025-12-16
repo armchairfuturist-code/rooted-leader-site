@@ -54,36 +54,12 @@ export const BLOG_POSTS: BlogPost[] = [
 ];
 
 export const SERVICES: Service[] = [
-    {
-        title: "Integrative Whole Self Coaching",
-        description: "Stuck in life, your career, or in a life transition? This one-on-one signature coaching offering guides you to regulate your nervous system, recover from stress and trauma, and reconnect you with your Authentic Self. Using cutting-edge neuroscience, somatic practices, and ancient holistic wisdom.",
-        icon: "favorite_border"
-    },
-    {
-        title: "Somatic Experiencing™ Practices and Nervous System Regulation Coaching",
-        description: "Body-based healing that integrates trauma and stress stored in your nervous system without requiring you to relive painful memories - creating safety and wholeness from within. This is highly educational and each session rebuilds your nervous system and innate capacity to be your Authentic Self.",
-        icon: "psychology"
-    },
-    {
-        title: "Awakened and Regulated Leadership Coaching",
-        description: "Tailored support for founders, business owners, and executives to lead with emotional stability, make clear decisions under pressure, and maintain peak performance without sacrificing well-being or living an awakened life.",
-        icon: "security"
-    },
-    {
-        title: "Spiritual Emergence and Psychedelic Integration Coaching",
-        description: "Expert support to ground and integrate insight from psychedelic experiences, spiritual awakenings, non-ordinary states, dark nights of the soul, and profound life transitions that feel overwhelming or confusing to navigate alone. Make practical life changes and personally grow in these sessions. Note: Shannon does not act as a guide, sitter, or a psychedelic-assisted therapist. This service is purely coaching and no substances are recommended or provided.",
-        icon: "visibility"
-    },
-    {
-        title: "Reiki Energy Balancing and Attunement Services",
-        description: "Distance virtual Usui Holy Fire and Karuna Ki reiki energy balancing. This service is trauma-informed and balances your mind, body, spirit, and energy now, at any time in the past, and can help to manifest future goals. Shannon can also attune you to reiki to become a trauma-informed reiki practitioner.",
-        icon: "north"
-    },
-    {
-        title: "Consulting and Speaking Services for Organizations",
-        description: "Expert consulting and speaking engagements for organizations looking to foster resilience, improve leadership, and create healthier work environments. Topics include nervous system health, trauma-informed practices, and integrative wellness.",
-        icon: "work_outline"
-    },
+    { title: "Integrative Whole Self Coaching", icon: "favorite_border" },
+    { title: "Somatic Experiencing™ Practices", icon: "psychology" },
+    { title: "Awakened and Regulated Leadership Coaching", icon: "security" },
+    { title: "Spiritual Emergence Integration", icon: "visibility" },
+    { title: "Reiki Energy Balancing Attunement Services", icon: "north" },
+    { title: "Consulting and Speaking Services", icon: "work_outline" },
 ];
 
 // In /home/armchairfuturist/constants.ts

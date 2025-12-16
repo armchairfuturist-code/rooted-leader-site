@@ -9,6 +9,11 @@ const Footer: React.FC = () => {
                     <span className="material-icons-outlined text-primary text-4xl">spa</span>
                 </div>
                 
+                <div className="flex justify-center space-x-6 mb-8 text-slate-400">
+                    <a href="#" className="hover:text-primary transition"><i className="material-icons-outlined" style={{ fontSize: '20px' }}>link</i></a>
+                    <a href="#" className="hover:text-primary transition"><i className="material-icons-outlined" style={{ fontSize: '20px' }}>camera_alt</i></a>
+                    <a href="#" className="hover:text-primary transition"><i className="material-icons-outlined" style={{ fontSize: '20px' }}>alternate_email</i></a>
+                    <a href="#" className="hover:text-primary transition"><i className="material-icons-outlined" style={{ fontSize: '20px' }}>facebook</i></a>
                 <div className="flex justify-center space-x-6 mb-8">
                     {SOCIAL_LINKS.map(social => (
                         <a 

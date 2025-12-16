@@ -11,11 +11,11 @@ const About: React.FC = () => {
                         {/* Image Column */}
                         <div className="lg:col-span-5 relative">
                             <div className="sticky top-24">
-                                <div className="rounded-2xl overflow-hidden shadow-2xl relative">
+                                <div className="aspect-[3/4] rounded-2xl overflow-hidden shadow-2xl relative">
                                     <img 
                                         src="/shan.jpg" 
                                         alt="Shannon Myers" 
-                                        className="w-full h-auto object-contain"
+                                        className="w-full h-full object-cover"
                                     />
                                     {/* Gradient overlay for depth */}
                                     <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent mix-blend-multiply"></div>

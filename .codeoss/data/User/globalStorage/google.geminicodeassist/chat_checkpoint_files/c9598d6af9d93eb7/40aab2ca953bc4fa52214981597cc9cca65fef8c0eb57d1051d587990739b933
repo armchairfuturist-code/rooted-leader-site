@@ -22,7 +22,6 @@ export interface BlogPost {
 export interface Service {
     title: string;
     icon: string;
-    description: string;
 }
 
 export interface SocialLink {

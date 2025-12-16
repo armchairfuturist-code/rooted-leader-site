@@ -17,10 +17,10 @@ const ServicesApply: React.FC = () => {
                         </p>
                     </div>
                     
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div className="space-y-4">
                         {SERVICES.map((service, idx) => (
                             <div key={idx} className="border border-gray-200 dark:border-gray-800 rounded-lg transition-all duration-300">
-                                <button 
+                                <div 
                                     onClick={() => setOpenService(openService === idx ? null : idx)}
                                     className="bg-white dark:bg-surface-dark p-6 rounded-lg flex items-center justify-between hover:bg-gray-50 dark:hover:bg-gray-800/50 cursor-pointer transition"
                                     aria-expanded={openService === idx}
@@ -30,10 +30,10 @@ const ServicesApply: React.FC = () => {
                                         <div className="p-2 rounded-full bg-blue-50 dark:bg-blue-900/30 text-primary mr-4">
                                             <span className="material-icons-outlined text-xl">{service.icon}</span>
                                         </div>
-                                        <h4 className="font-bold text-sm text-slate-800 dark:text-white">{service.title}</h4>
+                                        <h4 className="font-bold text-sm text-slate-800 dark:text-white" dangerouslySetInnerHTML={{ __html: service.title.replace(/ /g, ' <br/> ') }}></h4>
                                     </div>
                                     <span className={`material-icons-outlined text-gray-400 transition-transform duration-300 ${openService === idx ? 'rotate-180' : ''}`}>expand_more</span>
-                                </button>
+                                </div>
                                 <div id={`service-content-${idx}`} className={`grid transition-all duration-500 ease-in-out ${openService === idx ? 'grid-rows-[1fr] opacity-100' : 'grid-rows-[0fr] opacity-0'}`}>
                                     <div className="overflow-hidden">
                                         <p className="p-6 pt-0 text-sm text-slate-600 dark:text-slate-400 bg-white dark:bg-surface-dark rounded-b-lg">

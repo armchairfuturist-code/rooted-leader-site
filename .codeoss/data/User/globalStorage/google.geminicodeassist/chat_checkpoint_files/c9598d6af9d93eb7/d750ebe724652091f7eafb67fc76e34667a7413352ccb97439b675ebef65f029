@@ -2,8 +2,7 @@ import React, { useState } from 'react';
 import { SERVICES } from '../constants';
 
 const ServicesApply: React.FC = () => {
-    const [openService, setOpenService] = useState<number | null>(null);
-    const [isDisclosureOpen, setIsDisclosureOpen] = useState<boolean>(false);
+    const [isDisclosureOpen, setIsDisclosureOpen] = useState(false);
 
     return (
         <>
@@ -17,30 +16,16 @@ const ServicesApply: React.FC = () => {
                         </p>
                     </div>
                     
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                         {SERVICES.map((service, idx) => (
-                            <div key={idx} className="border border-gray-200 dark:border-gray-800 rounded-lg transition-all duration-300">
-                                <button 
-                                    onClick={() => setOpenService(openService === idx ? null : idx)}
-                                    className="bg-white dark:bg-surface-dark p-6 rounded-lg flex items-center justify-between hover:bg-gray-50 dark:hover:bg-gray-800/50 cursor-pointer transition"
-                                    aria-expanded={openService === idx}
-                                    aria-controls={`service-content-${idx}`}
-                                >
-                                    <div className="flex items-center">
-                                        <div className="p-2 rounded-full bg-blue-50 dark:bg-blue-900/30 text-primary mr-4">
-                                            <span className="material-icons-outlined text-xl">{service.icon}</span>
-                                        </div>
-                                        <h4 className="font-bold text-sm text-slate-800 dark:text-white">{service.title}</h4>
+                            <div key={idx} className="bg-white dark:bg-surface-dark p-6 rounded-lg shadow-sm border border-gray-100 dark:border-gray-800 flex items-center justify-between hover:border-primary cursor-pointer transition">
+                                <div className="flex items-center">
+                                    <div className="p-2 rounded-full bg-blue-50 dark:bg-blue-900/30 text-primary mr-4">
+                                        <span className="material-icons-outlined text-xl">{service.icon}</span>
                                     </div>
-                                    <span className={`material-icons-outlined text-gray-400 transition-transform duration-300 ${openService === idx ? 'rotate-180' : ''}`}>expand_more</span>
-                                </button>
-                                <div id={`service-content-${idx}`} className={`grid transition-all duration-500 ease-in-out ${openService === idx ? 'grid-rows-[1fr] opacity-100' : 'grid-rows-[0fr] opacity-0'}`}>
-                                    <div className="overflow-hidden">
-                                        <p className="p-6 pt-0 text-sm text-slate-600 dark:text-slate-400 bg-white dark:bg-surface-dark rounded-b-lg">
-                                            {service.description}
-                                        </p>
-                                    </div>
+                                    <h4 className="font-bold text-sm text-slate-800 dark:text-white" dangerouslySetInnerHTML={{ __html: service.title.replace(/ /g, ' <br/> ') }}></h4>
                                 </div>
+                                <span className="material-icons-outlined text-gray-400">expand_more</span>
                             </div>
                         ))}
                     </div>
