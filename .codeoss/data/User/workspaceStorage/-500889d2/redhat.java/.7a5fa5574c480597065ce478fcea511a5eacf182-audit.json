@@ -1,0 +1,15 @@
+{
+    "keep": {
+        "days": true,
+        "amount": 2
+    },
+    "auditLog": "/home/armchairfuturist/.codeoss/data/User/workspaceStorage/-500889d2/redhat.java/.7a5fa5574c480597065ce478fcea511a5eacf182-audit.json",
+    "files": [
+        {
+            "date": 1765873392243,
+            "name": "/home/armchairfuturist/.codeoss/data/User/workspaceStorage/-500889d2/redhat.java/client.log.2025-12-16",
+            "hash": "4e30ad0ad2223183c20edf50380d44f14a8ace0d263cc7219f8ccf50b5307e46"
+        }
+    ],
+    "hashType": "sha256"
+}

@@ -1,0 +1,57 @@
+import React from 'react';
+
+const Hero: React.FC = () => {
+    return (
+        <header className="relative pt-16 pb-24 overflow-hidden">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                    
+                    {/* Left Content */}
+                    <div className="space-y-8 animate-fade-in-up">
+                        <div className="inline-flex items-center space-x-2 bg-blue-50 dark:bg-blue-900/30 px-3 py-1 rounded-full border border-blue-100 dark:border-blue-800">
+                            <span className="material-icons-outlined text-primary text-xs">verified</span>
+                            <span className="text-xs font-semibold text-primary uppercase tracking-wide">
+                                Internationally Acclaimed Trauma & Nervous System Expert
+                            </span>
+                        </div>
+                        
+                        <h1 className="font-display text-5xl md:text-6xl font-bold text-slate-900 dark:text-white leading-tight">
+                            Beyond Surface Solutions: <br />
+                            <span className="text-primary">Reclaim Your Wholeness.</span><br />
+                            <span className="text-primary">Integrate Your Power.</span>
+                        </h1>
+                        
+                        <p className="text-lg text-slate-600 dark:text-slate-400 max-w-lg leading-relaxed">
+                            For Founders, Leaders, Visionaries, and Seekers ready to move beyond conventional approaches and cultivate sustainable resilience from the inside out, through an integrative path to regulate, integrate, and awaken.
+                        </p>
+                        
+                        <div className="flex flex-col sm:flex-row gap-4">
+                            <a href="#inquire" className="bg-primary hover:bg-blue-600 text-white px-8 py-3 rounded font-medium transition flex items-center justify-center shadow-md hover:shadow-lg">
+                                <span className="material-icons-outlined mr-2 text-sm">search</span> Inquire about Services
+                            </a>
+                            <a href="#quiz" className="bg-white dark:bg-surface-dark border border-gray-300 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-800 text-slate-700 dark:text-white px-8 py-3 rounded font-medium transition flex items-center justify-center shadow-sm">
+                                <span className="material-icons-outlined mr-2 text-sm">assignment</span> Take the Quiz
+                            </a>
+                        </div>
+                    </div>
+
+                    {/* Right Image */}
+                    <div className="relative">
+                        <div className="absolute -inset-4 bg-gradient-to-r from-blue-100 to-purple-100 dark:from-blue-900/20 dark:to-purple-900/20 rounded-2xl blur-xl opacity-70"></div>
+                        <img 
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuCyDkG80NbgxhT1vo2pOpt3wbMiDqBEowrQjXGWhy4B0p4DCVGvh9j1sN3O9GTfFg76iVN0HPm3MX7DeDNRt9inee8PwWxh_C7bqhycQQV2Op2E7U2aZKZVzluTgSCuoH-BCRJkLc2l7szu-CqUl_odhKlNLW8vzInMqXl5ywEcn42XcuggNvPCfISmc7qHCCDgyPLNh9rCjJHZP8UvferOepNUE55UjeNkbOe2YAH8z2akbTcAw-qzNSzb9wrzE6G-s-6NaIorQBk" 
+                            alt="Abstract architectural details representing structure and integration" 
+                            className="relative rounded-xl shadow-2xl w-full object-cover h-[500px]"
+                        />
+                        <div className="absolute bottom-6 right-6 bg-white/90 dark:bg-slate-800/90 backdrop-blur px-4 py-2 rounded-lg shadow-lg text-xs font-medium text-slate-600 dark:text-slate-300">
+                            Tens of thousands of leaders empowered
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </header>
+    );
+};
+
+export default Hero;
