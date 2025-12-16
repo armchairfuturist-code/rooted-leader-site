@@ -167,3 +167,103 @@ If you ever need to build a **new** website from scratch, here is the shorthand 
 *   **Changes aren't showing up live:**
     *   Go to your GitHub Repository page. Click the **"Actions"** tab.
     *   Is the circle green? (Success). Is it red? (The build failed—click it to see why).
+
+**Using Antigravity** (Google's new "Agentic" IDE) is essentially a super-powered version of VS Code. Because it is built on standard tools, **using it will not break your Cloud Shell workflow.**
+
+You can switch back and forth as much as you like. Here is the "Hybrid" mental model:
+*   **GitHub** is the "Central Vault" (The Truth).
+*   **Cloud Shell** is one door into the vault.
+*   **Antigravity** is a second (fancier) door into the vault.
+
+As long as you **Push** your changes from Antigravity to GitHub, Cloud Shell will see them (once you `git pull`).
+
+Here is your step-by-step guide to moving into Antigravity with **no prior knowledge**.
+
+---
+
+### Phase 1: Install & Clone (Getting the code)
+
+Antigravity is likely a desktop application you download. Once you have installed it and opened it, follow these steps to pull your project down from the cloud.
+
+1.  **Get your "Clone URL" first:**
+    *   Go to your repository: `https://github.com/armchairfuturist-code/rooted-leader-site`
+    *   Click the green **Code** button.
+    *   Copy the **HTTPS** URL (it ends in `.git`).
+
+2.  **Open Antigravity:**
+    *   You will likely see a Welcome screen.
+    *   Look for a button that says **"Clone Git Repository"** (or sometimes just "Clone Repo").
+    *   *If you don't see it:* Press `Ctrl + Shift + P` (or `Cmd + Shift + P` on Mac) to open the Command Palette, type `Git: Clone`, and press Enter.
+
+3.  **Paste the URL:**
+    *   Paste the URL you copied in Step 1.
+    *   It will ask you to select a folder on your computer to save it. Choose somewhere easy to find (like `Documents/Projects`).
+
+4.  **Open the Project:**
+    *   Once it downloads, a popup will ask "Would you like to open the cloned repository?"
+    *   Click **Open**.
+
+### Phase 2: Setup the Environment (The "Yarn" Step)
+
+Your computer doesn't know about the project's tools yet (Node, Yarn, etc.) like Cloud Shell did. Antigravity should handle this, but you need to trigger it.
+
+1.  **Open the Terminal:**
+    *   In Antigravity, look at the top menu: **Terminal > New Terminal**. (It usually appears at the bottom).
+
+2.  **Install Dependencies:**
+    *   Type this command and hit Enter:
+        ```bash
+        yarn
+        ```
+    *   *Note:* If it says "yarn command not found," you might need to install Node.js on your computer first. However, Antigravity usually includes these tools or asks to install them for you.
+
+### Phase 3: The "Agentic" Workflow (Making Changes)
+
+This is where Antigravity shines. Instead of just typing code, you can use the AI agent.
+
+1.  **Run the Dev Server:**
+    *   In the terminal, type:
+        ```bash
+        yarn dev
+        ```
+    *   It will give you a local URL (e.g., `http://localhost:5173`).
+    *   **Ctrl + Click** that link to open your site in your Chrome browser.
+
+2.  **Make a Change (The AI Way):**
+    *   Locate the **Agent Sidebar** (usually on the right or left, looking like a sparkle or robot icon).
+    *   Type a command like: *"Update the Hero section text to say 'Welcome to the Future' and make the background slightly darker."*
+    *   The Agent will read your files, plan the change, and present it to you.
+    *   **Accept** the changes if they look good.
+
+### Phase 4: Saving to the Vault (Syncing)
+
+When you are done working in Antigravity, you **must** send the changes to GitHub so your Cloud Shell (and your automated deployment robot) can see them.
+
+1.  **Click the "Source Control" Icon:**
+    *   It looks like a branch `Y` icon on the sidebar.
+2.  **Stage & Commit:**
+    *   You will see a list of changed files.
+    *   Type a message in the box (e.g., "Updated hero text via Antigravity").
+    *   Click the **Commit** (or checkmark) button.
+3.  **Sync (Push):**
+    *   Click the big blue **Sync Changes** button (or `Push`).
+    *   *First time setup:* It will likely open your browser to ask you to log in to GitHub. Authorize it.
+
+---
+
+### How to keep "Cloud Shell" working
+
+If you travel and want to use Cloud Shell again, you just need to update it with the work you did in Antigravity.
+
+1.  Open Cloud Shell.
+2.  Type:
+    ```bash
+    git pull
+    ```
+3.  That's it! Cloud Shell now matches Antigravity.
+
+### Summary Checklist for Antigravity
+1.  **Clone** your repo using the GitHub URL.
+2.  Run **`yarn`** to install tools.
+3.  Run **`yarn dev`** to preview.
+4.  **Sync/Push** changes via the Source Control tab to trigger the live deployment.
