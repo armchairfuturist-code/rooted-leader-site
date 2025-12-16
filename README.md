@@ -97,6 +97,37 @@ Run these three commands:
 *   GitHub deploys the result to Firebase.
 *   Your live site (`theintegrativepractitioner.com`) updates in about 2-3 minutes automatically.
 
+MANUAL MODE (if GitHub actions aren't working)
+
+Here is your 2-step process to update the live site instantly:
+
+### Step 1: Build the Site
+You need to tell Yarn to take your code and create the final website files (the `dist` folder).
+
+```bash
+yarn build
+```
+*(Wait until it says "Done" or "built in X seconds")*
+
+### Step 2: Deploy the Site
+Now, take that `dist` folder and send it to Firebase.
+
+```bash
+firebase deploy --only hosting
+```
+
+### That's it!
+*   **Pros:** It is instant. You see the changes live in about 30 seconds.
+*   **Cons:** It doesn't back up your code to GitHub automatically.
+
+**Important Reminder:**
+Even if you deploy manually like this, you should still occasionally save your code to GitHub just so you don't lose your work if Cloud Shell resets:
+
+```bash
+git add .
+git commit -m "saving work"
+git push
+```
 ---
 
 ## 3. Setup Reference (For New Projects)
