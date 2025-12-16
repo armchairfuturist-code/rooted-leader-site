@@ -94,3 +94,11 @@ git push -u origin main --force
 cd the-rooted-leader
 git pull
 yarn dev
+git add .
+git commit -m "Updated profile image, filled in services context, updated footer links"
+git push
+firebase init hosting:github
+firebase init hosting:github --no-localhost
+curl "https://github.com/login/oauth/authorize?client_id=89cf50f02ac6aaed3484&state=759267035&redirect_uri=http%3A%2F%2Flocalhost%3A9005&scope=read%3Auser%20repo%20public_repo"
+firebase init hosting:github
+curl "https://github.com/login/oauth/authorize?client_id=89cf50f02ac6aaed3484&state=608516637&redirect_uri=http%3A%2F%2Flocalhost%3A9005&scope=read%3Auser%20repo%20public_repo"
