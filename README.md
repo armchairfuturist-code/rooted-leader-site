@@ -168,7 +168,9 @@ If you ever need to build a **new** website from scratch, here is the shorthand 
     *   Go to your GitHub Repository page. Click the **"Actions"** tab.
     *   Is the circle green? (Success). Is it red? (The build failed—click it to see why).
 
-**Using Antigravity** (Google's new "Agentic" IDE) is essentially a super-powered version of VS Code. Because it is built on standard tools, **using it will not break your Cloud Shell workflow.**
+## 5. Using Antigravity
+
+(Google's new "Agentic" IDE) is essentially a super-powered version of VS Code. Because it is built on standard tools, **using it will not break your Cloud Shell workflow.**
 
 You can switch back and forth as much as you like. Here is the "Hybrid" mental model:
 *   **GitHub** is the "Central Vault" (The Truth).
