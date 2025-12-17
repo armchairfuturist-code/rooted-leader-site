@@ -16,11 +16,11 @@ const ServicesApply: React.FC = () => {
                             Explore the pathways to profound healing and integrative wellness. Each offering is Trauma-Informed and designed to meet you where you are.
                         </p>
                     </div>
-                    
+
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                         {SERVICES.map((service, idx) => (
                             <div key={idx} className="border border-gray-200 dark:border-gray-800 rounded-lg transition-all duration-300">
-                                <button 
+                                <button
                                     onClick={() => setOpenService(openService === idx ? null : idx)}
                                     className="bg-white dark:bg-surface-dark p-6 rounded-lg flex items-center justify-between hover:bg-gray-50 dark:hover:bg-gray-800/50 cursor-pointer transition"
                                     aria-expanded={openService === idx}
@@ -44,7 +44,7 @@ const ServicesApply: React.FC = () => {
                             </div>
                         ))}
                     </div>
-                    
+
                     <p className="text-center text-xs text-slate-500 italic mt-8 max-w-2xl mx-auto">
                         Each service addresses the echoes of Trauma and stress, creating lasting transformation through Shannon's unique integration of neuroscience, somatic wisdom, and holistic healing.
                     </p>
@@ -62,7 +62,7 @@ const ServicesApply: React.FC = () => {
                             This application is your opportunity to share your journey and aspirations. It's a vital step that allows Shannon to understand your unique needs.
                         </p>
                     </div>
-                    
+
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
                         <div className="bg-blue-50 dark:bg-surface-dark p-8 rounded-xl border border-blue-100 dark:border-blue-900/30 transition-colors duration-300">
                             <h3 className="font-bold text-slate-800 dark:text-white mb-4 flex items-center">
@@ -80,7 +80,7 @@ const ServicesApply: React.FC = () => {
                                 ))}
                             </ul>
                         </div>
-                        
+
                         <div className="bg-surface-light dark:bg-surface-dark p-8 rounded-xl border border-gray-200 dark:border-gray-800 transition-colors duration-300">
                             <h3 className="font-bold text-slate-800 dark:text-white mb-4 flex items-center">
                                 <span className="material-icons-outlined mr-2 text-slate-500">priority_high</span> Important Considerations
@@ -101,7 +101,7 @@ const ServicesApply: React.FC = () => {
 
                     {/* Important Disclosures Accordion */}
                     <div className="mb-12">
-                        <div 
+                        <div
                             onClick={() => setIsDisclosureOpen(!isDisclosureOpen)}
                             className="border border-blue-100 dark:border-gray-800 rounded-lg p-4 bg-blue-50/50 dark:bg-surface-dark flex justify-between items-center cursor-pointer hover:bg-blue-50 dark:hover:bg-gray-800 transition"
                             aria-expanded={isDisclosureOpen}
@@ -115,23 +115,23 @@ const ServicesApply: React.FC = () => {
                             </span>
                         </div>
 
-                        <div 
+                        <div
                             id="disclosure-content"
                             className={`grid transition-all duration-500 ease-in-out ${isDisclosureOpen ? 'grid-rows-[1fr] opacity-100' : 'grid-rows-[0fr] opacity-0'}`}
                         >
                             <div className="overflow-hidden">
                                 <div className="prose dark:prose-invert prose-sm max-w-none text-slate-600 dark:text-slate-400 p-6 bg-blue-50/30 dark:bg-surface-dark/50 border border-t-0 border-blue-100 dark:border-gray-800 rounded-b-lg space-y-4">
-                                    <p><strong className="text-slate-800 dark:text-slate-200">Nature of Services</strong><br/>Shannon, as an Integrative Practitioner, offers coaching, somatic education, and wellness support. She does not diagnose or treat mental or physical health conditions. This is not licensed therapy, crisis care, or medication management. The work is an educational and experiential partnership focused on personal growth, nervous system regulation, pattern shifts, and trauma integration.</p>
-                                    
-                                    <p><strong className="text-slate-800 dark:text-slate-200">Psychedelic Integration Coaching Services</strong><br/>Coaching for integrating non-ordinary states of consciousness, including psychedelics, plant medicines, or entheogens, is provided as non-clinical support only. Shannon does not provide substances, facilitate use, offer psychedelic-assisted therapy, or act as a sitter or guide. Coaching focuses on preparation and integration of experiences legally and independently undertaken by the client, using Trauma-Informed Care and Harm Reduction.</p>
-                                    
-                                    <p><strong className="text-slate-800 dark:text-slate-200">Scope of Practice</strong><br/>This work is not clinical licensed mental health therapy or treatment. No diagnosis or treatment of mental health conditions is provided. Services are for stabilized individuals maintaining their health. If you are in crisis, actively abused or traumatized, experiencing a spiritual emergency, have severe unmanaged mental health issues, recent psychotic episodes or hospitalizations, recent crisis service use, non-trauma-related personality disorders, or current emergencies, Shannon's services are not appropriate. They are not a substitute for medical care, psychiatric treatment, or crisis intervention. Clients are encouraged to maintain relationships with healthcare providers.</p>
-                                    
-                                    <p><strong className="text-slate-800 dark:text-slate-200">Emergency Situations</strong><br/>Emergency situations require immediate contact with crisis or emergency medical services. Shannon's services are not emergency services.</p>
-                                    
-                                    <p><strong className="text-slate-800 dark:text-slate-200">Professional Boundaries</strong><br/>Shannon provides educational support and coaching within clear ethical boundaries, respecting client autonomy, confidentiality, and compliance with laws and professional standards.</p>
-                                    
-                                    <p><strong className="text-slate-800 dark:text-slate-200">Client Responsibility</strong><br/>Clients are responsible for their decisions, actions, and well-being throughout this process. This partnership is most effective when combined with appropriate self-care and professional medical support.</p>
+                                    <p><strong className="text-slate-800 dark:text-slate-200">Nature of Services</strong><br />Shannon, as an Integrative Practitioner, offers coaching, somatic education, and wellness support. She does not diagnose or treat mental or physical health conditions. This is not licensed therapy, crisis care, or medication management. The work is an educational and experiential partnership focused on personal growth, nervous system regulation, pattern shifts, and trauma integration.</p>
+
+                                    <p><strong className="text-slate-800 dark:text-slate-200">Psychedelic Integration Coaching Services</strong><br />Coaching for integrating non-ordinary states of consciousness, including psychedelics, plant medicines, or entheogens, is provided as non-clinical support only. Shannon does not provide substances, facilitate use, offer psychedelic-assisted therapy, or act as a sitter or guide. Coaching focuses on preparation and integration of experiences legally and independently undertaken by the client, using Trauma-Informed Care and Harm Reduction.</p>
+
+                                    <p><strong className="text-slate-800 dark:text-slate-200">Scope of Practice</strong><br />This work is not clinical licensed mental health therapy or treatment. No diagnosis or treatment of mental health conditions is provided. Services are for stabilized individuals maintaining their health. If you are in crisis, actively abused or traumatized, experiencing a spiritual emergency, have severe unmanaged mental health issues, recent psychotic episodes or hospitalizations, recent crisis service use, non-trauma-related personality disorders, or current emergencies, Shannon's services are not appropriate. They are not a substitute for medical care, psychiatric treatment, or crisis intervention. Clients are encouraged to maintain relationships with healthcare providers.</p>
+
+                                    <p><strong className="text-slate-800 dark:text-slate-200">Emergency Situations</strong><br />Emergency situations require immediate contact with crisis or emergency medical services. Shannon's services are not emergency services.</p>
+
+                                    <p><strong className="text-slate-800 dark:text-slate-200">Professional Boundaries</strong><br />Shannon provides educational support and coaching within clear ethical boundaries, respecting client autonomy, confidentiality, and compliance with laws and professional standards.</p>
+
+                                    <p><strong className="text-slate-800 dark:text-slate-200">Client Responsibility</strong><br />Clients are responsible for their decisions, actions, and well-being throughout this process. This partnership is most effective when combined with appropriate self-care and professional medical support.</p>
                                 </div>
                             </div>
                         </div>

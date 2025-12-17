@@ -9,7 +9,7 @@ const ProblemSolution: React.FC = () => {
                         Beyond Surface Solutions: Healing at the Root
                     </h2>
                 </div>
-                
+
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                     {/* Problem Column */}
                     <div className="bg-white dark:bg-surface-dark p-8 rounded-xl shadow-sm border border-red-100 dark:border-red-900/30 transition-colors duration-300">
@@ -54,7 +54,7 @@ const ProblemSolution: React.FC = () => {
 
                 <div className="mt-12 text-center">
                     <a href="#pathway" className="inline-flex items-center bg-primary hover:bg-blue-600 text-white px-8 py-3 rounded font-medium transition shadow-lg hover:shadow-xl transform hover:-translate-y-1">
-                        <span className="material-icons-outlined mr-2">explore</span> Discover The Integrative Pathway
+                        <span className="material-icons-outlined mr-2">explore</span> Discover The Integrative Pathways
                     </a>
                 </div>
             </div>

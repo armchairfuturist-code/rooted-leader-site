@@ -3,18 +3,18 @@ import React from 'react';
 const Methodology: React.FC = () => {
     return (
         <>
-            {/* The Integrative Pathway Section */}
-            <section id="pathway" className="py-20 bg-white dark:bg-background-dark transition-colors duration-300">
+            {/* The Integrative Pathways Section */}
+            <section id="pathways" className="py-20 bg-white dark:bg-background-dark transition-colors duration-300">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="text-center max-w-3xl mx-auto mb-16">
                         <h2 className="font-display text-3xl md:text-4xl font-bold text-slate-900 dark:text-white mb-6">
-                            The Integrative Pathway to Transformation
+                            The Integrative Pathways to Transformation
                         </h2>
                         <p className="text-slate-600 dark:text-slate-400">
                             While many approaches address only symptoms or focus solely on mental patterns, this integrative method creates transformation by simultaneously working with your nervous system, thought patterns, emotional landscape, energy field, and deeper sense of purpose.
                         </p>
                     </div>
-                    
+
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                         {[
                             {
@@ -60,7 +60,7 @@ const Methodology: React.FC = () => {
                                 <p className="text-slate-600 dark:text-slate-400 mb-8">
                                     This isn't just another coaching program. It's a carefully crafted journey that addresses the echoes of nervous system dysfunction by working with your nervous system's natural capacity for healing while integrating mind, body, spirit, and energy.
                                 </p>
-                                
+
                                 <div className="space-y-6">
                                     {[
                                         { icon: "psychology", title: "Cutting-Edge Neuroscience", desc: "Evidence-based nervous system retraining and vagus nerve techniques that create lasting neurological change." },
@@ -87,11 +87,11 @@ const Methodology: React.FC = () => {
                                     </a>
                                 </div>
                             </div>
-                            
+
                             <div className="relative min-h-[400px] lg:min-h-full overflow-hidden" >
-                                <img 
-                                    src="/path.jpg" 
-                                    alt="A person walking on a path that splits in a mountainous area, symbolizing the choice of a new path." 
+                                <img
+                                    src="/path.jpg"
+                                    alt="A person walking on a path that splits in a mountainous area, symbolizing the choice of a new path."
                                     className="absolute inset-0 w-full h-full object-cover"
                                 />
 
