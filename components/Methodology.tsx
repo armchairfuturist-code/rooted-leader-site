@@ -8,7 +8,7 @@ const Methodology: React.FC = () => {
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="text-center max-w-3xl mx-auto mb-16">
                         <h2 className="font-display text-3xl md:text-4xl font-bold text-slate-900 dark:text-white mb-6">
-                            The Integrative Pathways to Transformation
+                            Integrative Pathways to Transformation
                         </h2>
                         <p className="text-slate-600 dark:text-slate-400">
                             While many approaches address only symptoms or focus solely on mental patterns, this integrative method creates transformation by simultaneously working with your nervous system, thought patterns, emotional landscape, energy field, and deeper sense of purpose.

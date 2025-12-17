@@ -52,11 +52,7 @@ const ProblemSolution: React.FC = () => {
                     </div>
                 </div>
 
-                <div className="mt-12 text-center">
-                    <a href="#pathway" className="inline-flex items-center bg-primary hover:bg-blue-600 text-white px-8 py-3 rounded font-medium transition shadow-lg hover:shadow-xl transform hover:-translate-y-1">
-                        <span className="material-icons-outlined mr-2">explore</span> Discover The Integrative Pathways
-                    </a>
-                </div>
+
             </div>
         </section>
     );

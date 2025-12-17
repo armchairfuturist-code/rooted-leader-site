@@ -19,10 +19,10 @@ const ServicesApply: React.FC = () => {
 
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                         {SERVICES.map((service, idx) => (
-                            <div key={idx} className="border border-gray-200 dark:border-gray-800 rounded-lg transition-all duration-300">
+                            <div key={idx} className="border border-gray-200 dark:border-gray-800 rounded-lg transition-all duration-300 shadow-sm hover:shadow-md h-full">
                                 <button
                                     onClick={() => setOpenService(openService === idx ? null : idx)}
-                                    className="bg-white dark:bg-surface-dark p-6 rounded-lg flex items-center justify-between hover:bg-gray-50 dark:hover:bg-gray-800/50 cursor-pointer transition"
+                                    className="w-full bg-white dark:bg-surface-dark p-6 rounded-lg flex items-center justify-between hover:bg-gray-50 dark:hover:bg-gray-800/50 cursor-pointer transition text-left"
                                     aria-expanded={openService === idx}
                                     aria-controls={`service-content-${idx}`}
                                 >
