@@ -58,7 +58,7 @@ const Methodology: React.FC = () => {
                                     The Integrative Coaching Program
                                 </h2>
                                 <p className="text-slate-600 dark:text-slate-400 mb-8">
-                                    This isn't just another coaching program. It's a carefully crafted journey that addresses the echoes of nervous system dysfunction by working with your nervous system's natural capacity for healing while integrating mind, body, spirit, and energy.
+                                    You’ve done the talk therapy. You understand the theory. Now, let’s do the deep somatic work required to actually shift your baseline. A clinical, action-oriented approach to reclaiming your nervous system's innate capacity for healing while integrating mind, body, spirit, and energy.
                                 </p>
 
                                 <div className="space-y-6">
