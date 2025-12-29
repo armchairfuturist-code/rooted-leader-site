@@ -6,6 +6,7 @@ import Methodology from './components/Methodology';
 import About from './components/About';
 import SocialProof from './components/SocialProof';
 import ServicesApply from './components/ServicesApply';
+import InsightsConnect from './components/InsightsConnect';
 import Footer from './components/Footer';
 
 const App: React.FC = () => {
@@ -18,6 +19,7 @@ const App: React.FC = () => {
       <About />
       <SocialProof />
       <ServicesApply />
+      <InsightsConnect />
       <Footer />
     </div>
   );

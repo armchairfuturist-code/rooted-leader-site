@@ -19,19 +19,25 @@ const Navbar: React.FC = () => {
                     {/* Desktop Navigation */}
                     <div className="hidden md:flex items-center space-x-8">
                         {NAV_LINKS.map((link) => (
-                            <a 
-                                key={link.label} 
-                                href={link.href} 
+                            <a
+                                key={link.label}
+                                href={link.href}
                                 className="text-sm font-medium hover:text-primary transition"
                             >
                                 {link.label}
                             </a>
                         ))}
                         <a
+                            href="#services"
+                            className="text-sm font-medium hover:text-primary transition"
+                        >
+                            Packages
+                        </a>
+                        <a
                             href="#latest-insights"
                             className="text-sm font-medium hover:text-primary transition"
                         >
-                            Latest Insights
+                            The Substack
                         </a>
                     </div>
 
@@ -41,13 +47,13 @@ const Navbar: React.FC = () => {
                             <span className="material-icons-outlined text-sm mr-1">email</span> E-mail
                         </a>
                         <a href="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ32NV8hog7MELSS-3L0-Ty-m6062yDiJvXZPdqt-ws-fTZMqSZKISlC9eOPyff4iXubkZKING9x" target="_blank" rel="noopener noreferrer" className="bg-primary hover:bg-blue-600 text-white px-4 py-2 rounded text-sm font-medium transition shadow-sm hover:shadow-md">
-                            Schedule an Existing Client
+                            Schedule as an Existing Client
                         </a>
                     </div>
 
                     {/* Mobile Menu Button */}
                     <div className="md:hidden flex items-center">
-                        <button 
+                        <button
                             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
                             className="text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200 focus:outline-none"
                         >
@@ -62,9 +68,9 @@ const Navbar: React.FC = () => {
                 <div className="md:hidden bg-white dark:bg-surface-dark border-t border-gray-100 dark:border-gray-800 absolute w-full shadow-lg">
                     <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
                         {NAV_LINKS.map((link) => (
-                            <a 
-                                key={link.label} 
-                                href={link.href} 
+                            <a
+                                key={link.label}
+                                href={link.href}
                                 className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 dark:text-gray-200 hover:text-primary hover:bg-gray-50 dark:hover:bg-gray-800"
                                 onClick={() => setIsMobileMenuOpen(false)}
                             >
@@ -72,17 +78,24 @@ const Navbar: React.FC = () => {
                             </a>
                         ))}
                         <a
+                            href="#services"
+                            className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 dark:text-gray-200 hover:text-primary hover:bg-gray-50 dark:hover:bg-gray-800"
+                            onClick={() => setIsMobileMenuOpen(false)}
+                        >
+                            Packages
+                        </a>
+                        <a
                             href="#latest-insights"
                             className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 dark:text-gray-200 hover:text-primary hover:bg-gray-50 dark:hover:bg-gray-800"
                             onClick={() => setIsMobileMenuOpen(false)}
                         >
-                            Latest Insights
+                            The Substack
                         </a>
                         <a href="mailto:shannon@theintegrativecounselor.com" className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 dark:text-gray-200 hover:text-primary hover:bg-gray-50 dark:hover:bg-gray-800">
                             E-mail
                         </a>
                         <a href="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ32NV8hog7MELSS-3L0-Ty-m6062yDiJvXZPdqt-ws-fTZMqSZKISlC9eOPyff4iXubkZKING9x" target="_blank" rel="noopener noreferrer" className="block w-full text-left px-3 py-2 rounded-md text-base font-medium text-primary hover:bg-gray-50 dark:hover:bg-gray-800">
-                            Schedule an Existing Client
+                            Schedule as an Existing Client
                         </a>
                     </div>
                 </div>

@@ -20,7 +20,7 @@ const servicesPaths = [
       <p class="text-sm text-gray-500 italic mt-4">Scope: This is a single consulting session, not an intake for clinical services.</p>
     `,
         packages: [], // Single option only
-        ctaLink: "https://practicequeue.com/path-1-link"
+        ctaLink: "https://docs.google.com/forms/d/e/1FAIpQLSdMdvumB1DSyqxR0BfeBqPkB1a1Zuo_mBkX81yzs2AQZEhKBA/viewform"
     },
     {
         id: "path-2",
@@ -44,7 +44,7 @@ const servicesPaths = [
             { sessions: 12, price: 3000, label: "12-Session Package", save: "$300" },
             { sessions: 24, price: 6000, label: "24-Session Package", save: "$600" }
         ],
-        ctaLink: "https://practicequeue.com/path-2-link"
+        ctaLink: "https://docs.google.com/forms/d/e/1FAIpQLSdMdvumB1DSyqxR0BfeBqPkB1a1Zuo_mBkX81yzs2AQZEhKBA/viewform"
     },
     {
         id: "path-3",
@@ -66,7 +66,7 @@ const servicesPaths = [
             { sessions: 12, price: 3000, label: "12-Session Package", save: "$300" },
             { sessions: 24, price: 6000, label: "24-Session Package", save: "$600" }
         ],
-        ctaLink: "https://practicequeue.com/path-3-link"
+        ctaLink: "https://docs.google.com/forms/d/e/1FAIpQLSdMdvumB1DSyqxR0BfeBqPkB1a1Zuo_mBkX81yzs2AQZEhKBA/viewform"
     },
     {
         id: "path-4",
@@ -88,7 +88,7 @@ const servicesPaths = [
             { sessions: 12, price: 3000, label: "12-Session Package", save: "$300" },
             { sessions: 24, price: 6000, label: "24-Session Package", save: "$600" }
         ],
-        ctaLink: "https://practicequeue.com/path-4-link"
+        ctaLink: "https://docs.google.com/forms/d/e/1FAIpQLSdMdvumB1DSyqxR0BfeBqPkB1a1Zuo_mBkX81yzs2AQZEhKBA/viewform"
     },
     {
         id: "path-5",
@@ -110,7 +110,7 @@ const servicesPaths = [
             { sessions: 12, price: 4200, label: "12-Session Package", save: "$420" },
             { sessions: 24, price: 8400, label: "24-Session Package", save: "$840" }
         ],
-        ctaLink: "https://practicequeue.com/path-5-link"
+        ctaLink: "https://docs.google.com/forms/d/e/1FAIpQLSdMdvumB1DSyqxR0BfeBqPkB1a1Zuo_mBkX81yzs2AQZEhKBA/viewform"
     },
     {
         id: "path-6",
@@ -211,7 +211,7 @@ const ServiceCard = ({ service }: { service: any }) => {
                     rel="noopener noreferrer"
                     className="block w-full py-3 px-4 bg-slate-900 dark:bg-white text-white dark:text-slate-900 font-semibold text-center rounded hover:bg-slate-800 dark:hover:bg-gray-100 transition-colors duration-200"
                 >
-                    Book Now
+                    Join Priority Waitlist
                 </a>
             </div>
 
@@ -240,8 +240,8 @@ const ServiceCard = ({ service }: { service: any }) => {
                                         key={idx}
                                         onClick={() => setSelectedPackageIdx(idx)}
                                         className={`px-3 py-2 text-xs font-bold rounded border transition-all duration-200 ${selectedPackageIdx === idx
-                                                ? 'bg-white dark:bg-slate-700 text-slate-900 dark:text-white border-slate-300 dark:border-slate-500 shadow-sm'
-                                                : 'bg-transparent text-slate-500 border-transparent hover:bg-black/5 dark:hover:bg-white/5'
+                                            ? 'bg-white dark:bg-slate-700 text-slate-900 dark:text-white border-slate-300 dark:border-slate-500 shadow-sm'
+                                            : 'bg-transparent text-slate-500 border-transparent hover:bg-black/5 dark:hover:bg-white/5'
                                             }`}
                                     >
                                         {pkg.sessions} Sessions
