@@ -1,57 +1,287 @@
 import React, { useState } from 'react';
-import { SERVICES } from '../constants';
+
+const servicesData = [
+    {
+        id: "path-1",
+        badge: "Step 1: The Entry Point",
+        title: "Clarity & Insight Session",
+        description: "Strategic mapping to locate the 'Systemic Knot' in your nervous system or business.",
+        priceDisplay: "$300",
+        subPrice: "Single 60-Min Strategy Session",
+        features: [
+            "Root Cause Analysis (Trauma or Strategy)",
+            "Actionable Somatic or Business Tool",
+            "Custom Roadmap for Future Work",
+            "Required prerequisite for Advisory"
+        ],
+        cta: "Book Strategy Session",
+        isFeatured: false,
+        theme: "entry"
+    },
+    {
+        id: "path-5",
+        badge: "The Signature Mentorship",
+        title: "The Authentic & Aligned Self",
+        description: "The 'Master Container' blending somatic healing, executive strategy, and spiritual alignment.",
+        priceDisplay: "$2,100",
+        subPrice: "Starting at (6-Session Package)",
+        features: [
+            "Trauma & Somatic Regulation (SEP/IFS)",
+            "Executive Career & Business Strategy",
+            "Spiritual & Energetic Alignment",
+            "Neurodivergent Workflow Design"
+        ],
+        packages: [
+            { sessions: 6, price: "$2,100", save: "$105" },
+            { sessions: 12, price: "$4,200", save: "$420" },
+            { sessions: 24, price: "$8,400", save: "$840" }
+        ],
+        cta: "Apply for Mentorship",
+        isFeatured: true,
+        theme: "signature"
+    },
+    {
+        id: "path-2",
+        badge: "Deep Healing",
+        title: "Integrative Somatics",
+        description: "Metabolize biological trauma (Fight, Flight, Freeze) and restore nervous system capacity.",
+        priceDisplay: "$1,500",
+        subPrice: "Starting at (6-Session Package)",
+        features: [
+            "Somatic Experiencing™ (SE)",
+            "Polyvagal Theory Mapping",
+            "Internal Family Systems (IFS)",
+            "Vagus Nerve Retraining"
+        ],
+        packages: [
+            { sessions: 6, price: "$1,500", save: "$75" },
+            { sessions: 12, price: "$3,000", save: "$300" },
+            { sessions: 24, price: "$6,000", save: "$600" }
+        ],
+        cta: "Start Healing",
+        isFeatured: false,
+        theme: "standard"
+    },
+    {
+        id: "path-3",
+        badge: "Spiritual Integration",
+        title: "Mystical & Transpersonal",
+        description: "Stabilize and integrate psychedelic journeys, spiritual emergence, and ontological shock.",
+        priceDisplay: "$1,500",
+        subPrice: "Starting at (6-Session Package)",
+        features: [
+            "Psychedelic Integration Support",
+            "Processing 'Dark Nights of the Soul'",
+            "Ancestral & Karmic Clearing",
+            "Grounding Peak Experiences"
+        ],
+        packages: [
+            { sessions: 6, price: "$1,500", save: "$75" },
+            { sessions: 12, price: "$3,000", save: "$300" },
+            { sessions: 24, price: "$6,000", save: "$600" }
+        ],
+        cta: "Begin Integration",
+        isFeatured: false,
+        theme: "standard"
+    },
+    {
+        id: "path-4",
+        badge: "Energy Medicine",
+        title: "Energetic Recalibration",
+        description: "Deep restorative work for the subtle body, combining Reiki and Shamanic healing.",
+        priceDisplay: "$1,500",
+        subPrice: "Starting at (6-Session Package)",
+        features: [
+            "Usui Holy Fire® III Reiki",
+            "Karuna Ki Reiki (Shadow Work)",
+            "Shamanic Soul Retrieval",
+            "Emotional Armor Clearing"
+        ],
+        packages: [
+            { sessions: 6, price: "$1,500", save: "$75" },
+            { sessions: 12, price: "$3,000", save: "$300" },
+            { sessions: 24, price: "$6,000", save: "$600" }
+        ],
+        cta: "Restore Balance",
+        isFeatured: false,
+        theme: "standard"
+    },
+    {
+        id: "path-6",
+        badge: "Corporate & Systems",
+        title: "Strategic Advisory",
+        description: "Trauma-informed consulting for organizations, leaders, and complex systems change.",
+        priceDisplay: "Custom",
+        subPrice: "Retainers & Intensives",
+        features: [
+            "Systems Change Consulting",
+            "Workplace Trauma Audits",
+            "Executive 'Second Brain' Retainers",
+            "Keynote Speaking & Training"
+        ],
+        packages: [
+            { sessions: "Ad-Hoc", price: "$500/hr", save: "" },
+            { sessions: "Half-Day", price: "$1,800", save: "Intensive" },
+            { sessions: "Retainer", price: "$4,500", save: "10 Hours" }
+        ],
+        cta: "Inquire for Scope",
+        isFeatured: false,
+        theme: "corporate"
+    }
+];
+
+const ServiceCard = ({ service }: { service: any }) => {
+    const [showPackages, setShowPackages] = useState(false);
+
+    // Determine styles based on theme
+    const getCardStyles = () => {
+        switch (service.theme) {
+            case 'entry':
+                return "border-teal-500 dark:border-teal-400 border-2";
+            case 'signature':
+                return "border-primary shadow-[0_4px_20px_rgba(var(--primary-rgb,37,99,235),0.15)] dark:shadow-blue-900/30 ring-1 ring-blue-500/20 transform md:-translate-y-2 relative z-10";
+            case 'corporate':
+                return "border-slate-300 dark:border-slate-700 bg-slate-50/50 dark:bg-slate-900/50";
+            default:
+                return "border-gray-200 dark:border-gray-800 hover:border-gray-300 dark:hover:border-gray-700";
+        }
+    };
+
+    const isSignature = service.theme === 'signature';
+
+    return (
+        <div className={`flex flex-col h-full bg-white dark:bg-surface-dark rounded-2xl p-6 transition-all duration-300 ${getCardStyles()}`}>
+
+            {/* Badge */}
+            <div className="mb-4">
+                {isSignature ? (
+                    <span className="inline-block px-3 py-1 text-xs font-bold tracking-wider text-white uppercase bg-primary rounded-full shadow-sm">
+                        Most Popular
+                    </span>
+                ) : (
+                    <span className={`text-xs font-bold tracking-wider uppercase ${service.theme === 'entry' ? 'text-teal-600 dark:text-teal-400' :
+                            service.theme === 'corporate' ? 'text-slate-500' : 'text-slate-500'
+                        }`}>
+                        {service.badge}
+                    </span>
+                )}
+            </div>
+
+            {/* Header */}
+            <div className="mb-6">
+                <h3 className="text-xl font-bold text-slate-900 dark:text-white mb-2 leading-tight min-h-[3rem] flex items-center">
+                    {service.title}
+                </h3>
+                <div className="flex items-baseline gap-2 mb-1">
+                    <span className="text-3xl font-bold text-slate-900 dark:text-white">
+                        {service.priceDisplay}
+                    </span>
+                    {service.packages && service.priceDisplay !== "Custom" && (
+                        <span className="text-sm font-medium text-slate-500">
+                            / from
+                        </span>
+                    )}
+                </div>
+                <p className="text-sm text-slate-500 dark:text-slate-400 h-10">
+                    {service.subPrice}
+                </p>
+            </div>
+
+            {/* Description */}
+            <p className="text-sm text-slate-600 dark:text-slate-300 mb-6 min-h-[3rem]">
+                {service.description}
+            </p>
+
+            <div className="w-full h-px bg-gray-100 dark:bg-gray-800 mb-6"></div>
+
+            {/* Features */}
+            <ul className="space-y-3 mb-8 flex-grow">
+                {service.features.map((feature: string, idx: number) => (
+                    <li key={idx} className="flex items-start text-sm text-slate-700 dark:text-slate-300">
+                        <span className="material-icons-outlined text-green-500 text-base mr-2 flex-shrink-0" style={{ fontSize: '1.25rem' }}>check</span>
+                        <span className="leading-snug">{feature}</span>
+                    </li>
+                ))}
+            </ul>
+
+            {/* Spacer */}
+            <div className="mt-auto"></div>
+
+            {/* Package Toggle */}
+            {service.packages && (
+                <div className="mb-6">
+                    <button
+                        onClick={() => setShowPackages(!showPackages)}
+                        className="flex items-center text-xs font-semibold text-primary hover:text-blue-700 transition mb-3 focus:outline-none"
+                    >
+                        {showPackages ? 'Hide Options' : 'View Package Options'}
+                        <span className={`material-icons-outlined text-sm ml-1 transition-transform ${showPackages ? 'rotate-180' : ''}`}>expand_more</span>
+                    </button>
+
+                    <div className={`overflow-hidden transition-all duration-300 ease-in-out ${showPackages ? 'max-h-60 opacity-100' : 'max-h-0 opacity-0'}`}>
+                        <div className="space-y-2 bg-gray-50 dark:bg-gray-800/50 rounded-lg p-3">
+                            {service.packages.map((pkg: any, idx: number) => (
+                                <div key={idx} className="flex justify-between items-center text-xs">
+                                    <span className="font-medium text-slate-700 dark:text-slate-300">
+                                        {typeof pkg.sessions === 'number' ? `${pkg.sessions} Sessions` : pkg.sessions}
+                                    </span>
+                                    <div className="text-right">
+                                        <div className="font-bold text-slate-900 dark:text-white">{pkg.price}</div>
+                                        {pkg.save && <div className="text-[10px] text-green-600 dark:text-green-400">{typeof pkg.save === 'string' && pkg.save.startsWith('Save') ? pkg.save : `Save ${pkg.save}`}</div>}
+                                        {pkg.save && !pkg.save.toString().startsWith('Save') && !pkg.save.toString().includes('Intensive') && !pkg.save.toString().includes('Hours') && <div className="sr-only">Savings available</div>}
+                                    </div>
+                                </div>
+                            ))}
+                        </div>
+                    </div>
+                </div>
+            )}
+
+            {/* CTA */}
+            <button className={`w-full py-3 px-4 rounded-lg font-semibold transition-all duration-200 border ${isSignature
+                    ? 'bg-primary text-white border-primary hover:bg-blue-600 hover:shadow-lg'
+                    : 'bg-white dark:bg-transparent text-primary border-primary hover:bg-blue-50 dark:hover:bg-blue-900/20'
+                }`}>
+                {service.cta}
+            </button>
+        </div>
+    );
+};
 
 const ServicesApply: React.FC = () => {
-    const [openService, setOpenService] = useState<number | null>(null);
     const [isDisclosureOpen, setIsDisclosureOpen] = useState<boolean>(false);
 
     return (
         <>
-            {/* Services */}
+            {/* Integrated Services & Pricing Section */}
             <section id="services" className="py-20 bg-surface-light dark:bg-surface-dark/30 transition-colors duration-300">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                    <div className="text-center mb-12">
-                        <h2 className="font-display text-3xl font-bold text-slate-900 dark:text-white mb-4">Services</h2>
-                        <p className="text-sm text-slate-600 dark:text-slate-400 max-w-2xl mx-auto">
-                            Explore the pathways to profound healing and integrative wellness. Each offering is Trauma-Informed and designed to meet you where you are.
+                    <div className="text-center mb-16">
+                        <h2 className="font-display text-4xl font-bold text-slate-900 dark:text-white mb-6">Services & Pricing</h2>
+                        <p className="text-lg text-slate-600 dark:text-slate-400 max-w-3xl mx-auto leading-relaxed">
+                            Transparent pathways to profound healing and leadership. Choose the container that matches your depth of inquiry.
                         </p>
                     </div>
 
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                        {SERVICES.map((service, idx) => (
-                            <div key={idx} className="border border-gray-200 dark:border-gray-800 rounded-lg transition-all duration-300 shadow-sm hover:shadow-md h-full">
-                                <button
-                                    onClick={() => setOpenService(openService === idx ? null : idx)}
-                                    className="w-full bg-white dark:bg-surface-dark p-6 rounded-lg flex items-center justify-between hover:bg-gray-50 dark:hover:bg-gray-800/50 cursor-pointer transition text-left"
-                                    aria-expanded={openService === idx}
-                                    aria-controls={`service-content-${idx}`}
-                                >
-                                    <div className="flex items-center">
-                                        <div className="p-2 rounded-full bg-blue-50 dark:bg-blue-900/30 text-primary mr-4">
-                                            <span className="material-icons-outlined text-xl">{service.icon}</span>
-                                        </div>
-                                        <h4 className="font-bold text-sm text-slate-800 dark:text-white">{service.title}</h4>
-                                    </div>
-                                    <span className={`material-icons-outlined text-gray-400 transition-transform duration-300 ${openService === idx ? 'rotate-180' : ''}`}>expand_more</span>
-                                </button>
-                                <div id={`service-content-${idx}`} className={`grid transition-all duration-500 ease-in-out ${openService === idx ? 'grid-rows-[1fr] opacity-100' : 'grid-rows-[0fr] opacity-0'}`}>
-                                    <div className="overflow-hidden">
-                                        <p className="p-6 pt-0 text-sm text-slate-600 dark:text-slate-400 bg-white dark:bg-surface-dark rounded-b-lg">
-                                            {service.description}
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 items-start">
+                        {servicesData.map((service) => (
+                            <ServiceCard key={service.id} service={service} />
                         ))}
                     </div>
 
-                    <p className="text-center text-xs text-slate-500 italic mt-8 max-w-2xl mx-auto">
-                        Each service addresses the echoes of Trauma and stress, creating lasting transformation through Shannon's unique integration of neuroscience, somatic wisdom, and holistic healing.
+                    <div className="mt-16 text-center">
+                        <a href="#contact" className="inline-block text-slate-500 hover:text-primary transition-colors text-sm font-medium underline underline-offset-4 cursor-pointer">
+                            Existing Client? Click here for Alumni maintenance.
+                        </a>
+                    </div>
+
+                    <p className="text-center text-xs text-slate-400 mt-8 max-w-2xl mx-auto italic">
+                        * All packages include between-session email support and custom resources.
                     </p>
                 </div>
             </section>
 
-            {/* Application */}
+            {/* Application Section */}
             <section id="apply" className="py-20 bg-white dark:bg-background-dark transition-colors duration-300">
                 <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="text-center mb-12">
