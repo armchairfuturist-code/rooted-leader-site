@@ -169,7 +169,7 @@ const InsightsConnect: React.FC = () => {
                     <div className="flex justify-between items-end mb-12">
                         <div>
                             <h2 className="font-display text-3xl font-bold text-slate-900 dark:text-white mb-2">Latest Insights</h2>
-                            <p className="text-slate-600 dark:text-slate-400">Fresh perspectives from The Integrative Practitioner on Substack</p>
+                            <p className="text-slate-600 dark:text-slate-400 italic">Read by 5,000+ subscribers on Substack</p>
                         </div>
                         <a href="https://theintegrativepractitioner.substack.com/" target="_blank" rel="noopener noreferrer" className="hidden sm:flex items-center text-primary font-medium hover:text-blue-700 transition">
                             View all posts <span className="material-icons-outlined ml-1 text-sm">arrow_forward</span>
