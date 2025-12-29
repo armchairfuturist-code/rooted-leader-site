@@ -1,249 +1,263 @@
 import React, { useState } from 'react';
 
-const servicesData = [
+const servicesPaths = [
     {
         id: "path-1",
-        badge: "Step 1: The Entry Point",
-        title: "Clarity & Insight Session",
-        description: "Strategic mapping to locate the 'Systemic Knot' in your nervous system or business.",
-        priceDisplay: "$300",
-        subPrice: "Single 60-Min Strategy Session",
-        features: [
-            "Root Cause Analysis (Trauma or Strategy)",
-            "Actionable Somatic or Business Tool",
-            "Custom Roadmap for Future Work",
-            "Required prerequisite for Advisory"
-        ],
-        cta: "Book Strategy Session",
-        isFeatured: false,
-        theme: "entry"
-    },
-    {
-        id: "path-5",
-        badge: "The Signature Mentorship",
-        title: "The Authentic & Aligned Self",
-        description: "The 'Master Container' blending somatic healing, executive strategy, and spiritual alignment.",
-        priceDisplay: "$2,100",
-        subPrice: "Starting at (6-Session Package)",
-        features: [
-            "Trauma & Somatic Regulation (SEP/IFS)",
-            "Executive Career & Business Strategy",
-            "Spiritual & Energetic Alignment",
-            "Neurodivergent Workflow Design"
-        ],
-        packages: [
-            { sessions: 6, price: "$2,100", save: "$105" },
-            { sessions: 12, price: "$4,200", save: "$420" },
-            { sessions: 24, price: "$8,400", save: "$840" }
-        ],
-        cta: "Apply for Mentorship",
-        isFeatured: true,
-        theme: "signature"
+        pathLabel: "PATH 1",
+        category: "STRATEGY (START HERE)",
+        title: "The Clarity & Insight Session",
+        subtitle: "Strategic Mapping & Direction",
+        intent: "The universal entry point. When you are in the thick of a block, you cannot see the frame. We aim for direction, not full resolution.",
+        defaultPrice: 300,
+        priceLabel: "Single 60-Min Strategy Session",
+        perSessionRate: null, // No comparison needed for single session
+        savingsLabel: null,
+        deepContent: `
+      <h4 class="text-sm font-bold uppercase tracking-widest text-slate-900 dark:text-white mb-2 mt-4">The Experience</h4>
+      <p class="mb-4">I serve as your systemic mirror. I listen to the unspoken undercurrents of your narrative—biological, energetic, and structural—to locate the 'Systemic Knot'.</p>
+      <h4 class="text-sm font-bold uppercase tracking-widest text-slate-900 dark:text-white mb-2 mt-4">The Outcome</h4>
+      <p class="mb-4">You leave with insight into the root of stuckness (Trauma vs Strategy), one actionable tool to claim a small win, and a clear compass for your next steps.</p>
+      <p class="text-sm text-gray-500 italic mt-4">Scope: This is a single consulting session, not an intake for clinical services.</p>
+    `,
+        packages: [], // Single option only
+        ctaLink: "https://practicequeue.com/path-1-link"
     },
     {
         id: "path-2",
-        badge: "Deep Healing",
-        title: "Integrative Somatics",
-        description: "Metabolize biological trauma (Fight, Flight, Freeze) and restore nervous system capacity.",
-        priceDisplay: "$1,500",
-        subPrice: "Starting at (6-Session Package)",
-        features: [
-            "Somatic Experiencing™ (SE)",
-            "Polyvagal Theory Mapping",
-            "Internal Family Systems (IFS)",
-            "Vagus Nerve Retraining"
-        ],
+        pathLabel: "PATH 2",
+        category: "DEEP HEALING",
+        title: "Integrative Somatics & Trauma",
+        subtitle: "Restoring Capacity & Biological Safety",
+        intent: "We are not talking about trauma; we are doing something about it. Metabolize the physiology of the threat response so you can return to the present.",
+        defaultPrice: 1500,
+        perSessionRate: 250,
+        deepContent: `
+      <h4 class="text-sm font-bold uppercase tracking-widest text-slate-900 dark:text-white mb-2 mt-4">The Integrative Toolset</h4>
+      <p class="mb-4">A bespoke blend of Somatic Experiencing (SE™) to discharge survival energy, IFS to unburden protective parts, and Polyvagal Mapping to learn your nervous system's language.</p>
+      <h4 class="text-sm font-bold uppercase tracking-widest text-slate-900 dark:text-white mb-2 mt-4">Metabolizing the '4 Fs'</h4>
+      <p class="mb-4">Whether you are stuck in Fight (irritation), Flight (anxiety), Freeze (numbness), or Fawn (people-pleasing), we gently discharge the mobilized energy or 'thaw' the immobility.</p>
+      <h4 class="text-sm font-bold uppercase tracking-widest text-slate-900 dark:text-white mb-2 mt-4">Scope of Practice</h4>
+      <p class="mb-4">Complex Trauma, Developmental Wounds, Narcissistic Abuse Recovery, Shock Trauma, and Chronic Stress/Burnout.</p>
+    `,
         packages: [
-            { sessions: 6, price: "$1,500", save: "$75" },
-            { sessions: 12, price: "$3,000", save: "$300" },
-            { sessions: 24, price: "$6,000", save: "$600" }
+            { sessions: 6, price: 1500, label: "6-Session Package", save: "$75" },
+            { sessions: 12, price: 3000, label: "12-Session Package", save: "$300" },
+            { sessions: 24, price: 6000, label: "24-Session Package", save: "$600" }
         ],
-        cta: "Start Healing",
-        isFeatured: false,
-        theme: "standard"
+        ctaLink: "https://practicequeue.com/path-2-link"
     },
     {
         id: "path-3",
-        badge: "Spiritual Integration",
-        title: "Mystical & Transpersonal",
-        description: "Stabilize and integrate psychedelic journeys, spiritual emergence, and ontological shock.",
-        priceDisplay: "$1,500",
-        subPrice: "Starting at (6-Session Package)",
-        features: [
-            "Psychedelic Integration Support",
-            "Processing 'Dark Nights of the Soul'",
-            "Ancestral & Karmic Clearing",
-            "Grounding Peak Experiences"
-        ],
+        pathLabel: "PATH 3",
+        category: "SPIRITUAL INTEGRATION",
+        title: "Mystical & Transpersonal Integration",
+        subtitle: "Navigating the Unseen & The Expanded Self",
+        intent: "A hybrid of Trauma Healing and Transpersonal Coaching. We stabilize the nervous system to make meaning of peak experiences.",
+        defaultPrice: 1500,
+        perSessionRate: 250,
+        deepContent: `
+      <h4 class="text-sm font-bold uppercase tracking-widest text-slate-900 dark:text-white mb-2 mt-4">The Methodology</h4>
+      <p class="mb-4">Anchoring 'Peak Experiences' into daily behavior. We use somatic titration to resolve difficult trips, closing open loops and establishing safety.</p>
+      <h4 class="text-sm font-bold uppercase tracking-widest text-slate-900 dark:text-white mb-2 mt-4">The Scope</h4>
+      <p class="mb-4">Psychedelic Integration, Spiritual Emergence ('Dark Nights'), Ancestral/Karmic Clearing, and processing Mystical Experiences without fear.</p>
+    `,
         packages: [
-            { sessions: 6, price: "$1,500", save: "$75" },
-            { sessions: 12, price: "$3,000", save: "$300" },
-            { sessions: 24, price: "$6,000", save: "$600" }
+            { sessions: 6, price: 1500, label: "6-Session Package", save: "$75" },
+            { sessions: 12, price: 3000, label: "12-Session Package", save: "$300" },
+            { sessions: 24, price: 6000, label: "24-Session Package", save: "$600" }
         ],
-        cta: "Begin Integration",
-        isFeatured: false,
-        theme: "standard"
+        ctaLink: "https://practicequeue.com/path-3-link"
     },
     {
         id: "path-4",
-        badge: "Energy Medicine",
+        pathLabel: "PATH 4",
+        category: "ENERGY MEDICINE",
         title: "Energetic Recalibration",
-        description: "Deep restorative work for the subtle body, combining Reiki and Shamanic healing.",
-        priceDisplay: "$1,500",
-        subPrice: "Starting at (6-Session Package)",
-        features: [
-            "Usui Holy Fire® III Reiki",
-            "Karuna Ki Reiki (Shadow Work)",
-            "Shamanic Soul Retrieval",
-            "Emotional Armor Clearing"
-        ],
+        subtitle: "Subtle Body Energy Balancing",
+        intent: "Deep, restorative work for the subtle body. Going beyond relaxation into the architecture of your energy field.",
+        defaultPrice: 1500,
+        perSessionRate: 250,
+        deepContent: `
+      <h4 class="text-sm font-bold uppercase tracking-widest text-slate-900 dark:text-white mb-2 mt-4">The Modalities</h4>
+      <p class="mb-4"><strong>Usui Holy Fire® III Reiki:</strong> High-frequency energy for purification and emotional healing.</p>
+      <p class="mb-4"><strong>Karuna Ki Reiki:</strong> The 'Way of Compassionate Action' for shadow work and deep spiritual trauma.</p>
+      <p class="mb-4"><strong>Shamanic Healing:</strong> Earth-based practices and Soul Retrieval to restore your connection to nature.</p>
+    `,
         packages: [
-            { sessions: 6, price: "$1,500", save: "$75" },
-            { sessions: 12, price: "$3,000", save: "$300" },
-            { sessions: 24, price: "$6,000", save: "$600" }
+            { sessions: 6, price: 1500, label: "6-Session Package", save: "$75" },
+            { sessions: 12, price: 3000, label: "12-Session Package", save: "$300" },
+            { sessions: 24, price: 6000, label: "24-Session Package", save: "$600" }
         ],
-        cta: "Restore Balance",
-        isFeatured: false,
-        theme: "standard"
+        ctaLink: "https://practicequeue.com/path-4-link"
+    },
+    {
+        id: "path-5",
+        pathLabel: "PATH 5",
+        category: "MENTORSHIP (THE MASTER CONTAINER)",
+        title: "The Authentic & Aligned Self",
+        subtitle: "The Polymath Mentorship",
+        intent: "We weave every tool in the arsenal—Trauma, Strategy, Spirit, and Health—to help you embody wholeness in a fragmented world.",
+        defaultPrice: 2100,
+        perSessionRate: 350,
+        deepContent: `
+      <h4 class="text-sm font-bold uppercase tracking-widest text-slate-900 dark:text-white mb-2 mt-4">The Expertise Stack</h4>
+      <p class="mb-4">Access my full background: Trauma Specialist (SEP/IFS), Executive Strategist (25+ years), Spiritual Healer (Reiki Master), and Master of Counseling background.</p>
+      <h4 class="text-sm font-bold uppercase tracking-widest text-slate-900 dark:text-white mb-2 mt-4">Who This Is For</h4>
+      <p class="mb-4">Neurodivergent Creators needing workflow design, Entrepreneurs drowning in hustle, and Seekers wanting to bring their Spiritual and Professional selves into one room.</p>
+    `,
+        packages: [
+            { sessions: 6, price: 2100, label: "6-Session Package", save: "$105" },
+            { sessions: 12, price: 4200, label: "12-Session Package", save: "$420" },
+            { sessions: 24, price: 8400, label: "24-Session Package", save: "$840" }
+        ],
+        ctaLink: "https://practicequeue.com/path-5-link"
     },
     {
         id: "path-6",
-        badge: "Corporate & Systems",
-        title: "Strategic Advisory",
-        description: "Trauma-informed consulting for organizations, leaders, and complex systems change.",
-        priceDisplay: "Custom",
-        subPrice: "Retainers & Intensives",
-        features: [
-            "Systems Change Consulting",
-            "Workplace Trauma Audits",
-            "Executive 'Second Brain' Retainers",
-            "Keynote Speaking & Training"
-        ],
-        packages: [
-            { sessions: "Ad-Hoc", price: "$500/hr", save: "" },
-            { sessions: "Half-Day", price: "$1,800", save: "Intensive" },
-            { sessions: "Retainer", price: "$4,500", save: "10 Hours" }
-        ],
-        cta: "Inquire for Scope",
-        isFeatured: false,
-        theme: "corporate"
+        pathLabel: "PATH 6",
+        category: "CORPORATE & ADVISORY",
+        title: "Strategic Advisory & Consulting",
+        subtitle: "Trauma-Trained Systems Expert",
+        intent: "High-Level Advisory for Visionaries. I act as a 'Systemic Auditor,' viewing the complexity of your project through a trauma-informed lens.",
+        defaultPrice: "Custom",
+        perSessionRate: "Varies",
+        deepContent: `
+      <h4 class="text-sm font-bold uppercase tracking-widest text-slate-900 dark:text-white mb-2 mt-4">Services</h4>
+      <p class="mb-4">Systems Change Consulting, Workplace Trauma Audits, and Keynote Speaking.</p>
+      <h4 class="text-sm font-bold uppercase tracking-widest text-slate-900 dark:text-white mb-2 mt-4">Engagement Options</h4>
+      <p class="mb-4"><strong>Ad-Hoc:</strong> $500/hr for immediate problem solving.</p>
+      <p class="mb-4"><strong>Retainer:</strong> $4,500 for 10 hours ('Second Brain' on speed dial).</p>
+      <p class="mb-4"><strong>Intensives:</strong> Half-Day ($1,800) or Full-Day ($3,000).</p>
+    `,
+        packages: [], // Custom logic handled in UI
+        ctaLink: "mailto:inquire@theintegrativepractitioner.com"
     }
 ];
 
+const alumniPath = {
+    title: "PATH 7: THE HORIZON (Alumni Maintenance)",
+    text: "If you have worked with me in the past month, you are eligible for 'Grandfathered' rates for tune-ups.",
+    linkText: "Email for Alumni Access"
+};
+
 const ServiceCard = ({ service }: { service: any }) => {
-    const [showPackages, setShowPackages] = useState(false);
+    const [isExpanded, setIsExpanded] = useState(false);
+    const [selectedPackageIdx, setSelectedPackageIdx] = useState(0);
 
-    // Determine styles based on theme
-    const getCardStyles = () => {
-        switch (service.theme) {
-            case 'entry':
-                return "border-teal-500 dark:border-teal-400 border-2";
-            case 'signature':
-                return "border-primary shadow-[0_4px_20px_rgba(var(--primary-rgb,37,99,235),0.15)] dark:shadow-blue-900/30 ring-1 ring-blue-500/20 transform md:-translate-y-2 relative z-10";
-            case 'corporate':
-                return "border-slate-300 dark:border-slate-700 bg-slate-50/50 dark:bg-slate-900/50";
-            default:
-                return "border-gray-200 dark:border-gray-800 hover:border-gray-300 dark:hover:border-gray-700";
-        }
-    };
+    // Determine current display values
+    const packages = service.packages || [];
+    const hasPackages = packages.length > 0;
+    const currentPkg = hasPackages ? packages[selectedPackageIdx] : null;
 
-    const isSignature = service.theme === 'signature';
+    const displayPrice = currentPkg
+        ? (typeof currentPkg.price === 'number' ? `$${currentPkg.price.toLocaleString()}` : currentPkg.price)
+        : (typeof service.defaultPrice === 'number' ? `$${service.defaultPrice.toLocaleString()}` : service.defaultPrice);
+
+    const displayLabel = currentPkg ? currentPkg.label : service.priceLabel;
+    const displaySave = currentPkg ? currentPkg.save : service.savingsLabel;
 
     return (
-        <div className={`flex flex-col h-full bg-white dark:bg-surface-dark rounded-2xl p-6 transition-all duration-300 ${getCardStyles()}`}>
+        <div className="bg-white dark:bg-surface-dark border border-gray-200 dark:border-gray-800 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-300 flex flex-col h-full transform translate-z-0">
+            {/* Header / Visible State */}
+            <div className="p-8 pb-4 flex flex-col flex-grow">
+                {/* Badge */}
+                <div className="text-xs font-bold tracking-widest text-slate-500 uppercase mb-4">
+                    {service.pathLabel} • {service.category}
+                </div>
 
-            {/* Badge */}
-            <div className="mb-4">
-                {isSignature ? (
-                    <span className="inline-block px-3 py-1 text-xs font-bold tracking-wider text-white uppercase bg-primary rounded-full shadow-sm">
-                        Most Popular
-                    </span>
-                ) : (
-                    <span className={`text-xs font-bold tracking-wider uppercase ${service.theme === 'entry' ? 'text-teal-600 dark:text-teal-400' :
-                            service.theme === 'corporate' ? 'text-slate-500' : 'text-slate-500'
-                        }`}>
-                        {service.badge}
-                    </span>
-                )}
-            </div>
-
-            {/* Header */}
-            <div className="mb-6">
-                <h3 className="text-xl font-bold text-slate-900 dark:text-white mb-2 leading-tight min-h-[3rem] flex items-center">
+                {/* Title */}
+                <h3 className="font-display text-2xl font-bold text-slate-900 dark:text-white mb-1 leading-tight">
                     {service.title}
                 </h3>
-                <div className="flex items-baseline gap-2 mb-1">
-                    <span className="text-3xl font-bold text-slate-900 dark:text-white">
-                        {service.priceDisplay}
-                    </span>
-                    {service.packages && service.priceDisplay !== "Custom" && (
-                        <span className="text-sm font-medium text-slate-500">
-                            / from
+
+                {/* Subtitle */}
+                <p className="text-sm font-medium text-slate-600 dark:text-slate-400 uppercase tracking-wide mb-5">
+                    {service.subtitle}
+                </p>
+
+                {/* Intent/Hook */}
+                <p className="text-slate-600 dark:text-slate-300 italic mb-8 leading-relaxed">
+                    "{service.intent}"
+                </p>
+
+                {/* Divider to push pricing down */}
+                <div className="mt-auto border-t border-gray-100 dark:border-gray-800 mb-6"></div>
+
+                {/* Pricing Block */}
+                <div className="mb-6">
+                    <div className="flex items-baseline gap-3 mb-1">
+                        <span className="text-3xl font-bold text-slate-900 dark:text-white">
+                            {displayPrice}
                         </span>
+                        {displaySave && (
+                            <span className="bg-green-100 dark:bg-green-900/30 text-green-800 dark:text-green-400 text-[10px] font-bold px-2 py-0.5 rounded-full uppercase tracking-wide">
+                                {displaySave.toString().startsWith('$') ? `Save ${displaySave}` : displaySave}
+                            </span>
+                        )}
+                    </div>
+                    <div className="text-sm text-slate-500 dark:text-slate-400 font-medium">{displayLabel}</div>
+
+                    {service.perSessionRate && typeof service.perSessionRate === 'number' && (
+                        <div className="text-xs text-slate-400 mt-1">
+                            Standard Rate: ${service.perSessionRate} / session
+                        </div>
                     )}
                 </div>
-                <p className="text-sm text-slate-500 dark:text-slate-400 h-10">
-                    {service.subPrice}
-                </p>
+
+                {/* Primary CTA */}
+                <a
+                    href={service.ctaLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="block w-full py-3 px-4 bg-slate-900 dark:bg-white text-white dark:text-slate-900 font-semibold text-center rounded hover:bg-slate-800 dark:hover:bg-gray-100 transition-colors duration-200"
+                >
+                    Book Now
+                </a>
             </div>
 
-            {/* Description */}
-            <p className="text-sm text-slate-600 dark:text-slate-300 mb-6 min-h-[3rem]">
-                {service.description}
-            </p>
-
-            <div className="w-full h-px bg-gray-100 dark:bg-gray-800 mb-6"></div>
-
-            {/* Features */}
-            <ul className="space-y-3 mb-8 flex-grow">
-                {service.features.map((feature: string, idx: number) => (
-                    <li key={idx} className="flex items-start text-sm text-slate-700 dark:text-slate-300">
-                        <span className="material-icons-outlined text-green-500 text-base mr-2 flex-shrink-0" style={{ fontSize: '1.25rem' }}>check</span>
-                        <span className="leading-snug">{feature}</span>
-                    </li>
-                ))}
-            </ul>
-
-            {/* Spacer */}
-            <div className="mt-auto"></div>
-
-            {/* Package Toggle */}
-            {service.packages && (
-                <div className="mb-6">
-                    <button
-                        onClick={() => setShowPackages(!showPackages)}
-                        className="flex items-center text-xs font-semibold text-primary hover:text-blue-700 transition mb-3 focus:outline-none"
-                    >
-                        {showPackages ? 'Hide Options' : 'View Package Options'}
-                        <span className={`material-icons-outlined text-sm ml-1 transition-transform ${showPackages ? 'rotate-180' : ''}`}>expand_more</span>
-                    </button>
-
-                    <div className={`overflow-hidden transition-all duration-300 ease-in-out ${showPackages ? 'max-h-60 opacity-100' : 'max-h-0 opacity-0'}`}>
-                        <div className="space-y-2 bg-gray-50 dark:bg-gray-800/50 rounded-lg p-3">
-                            {service.packages.map((pkg: any, idx: number) => (
-                                <div key={idx} className="flex justify-between items-center text-xs">
-                                    <span className="font-medium text-slate-700 dark:text-slate-300">
-                                        {typeof pkg.sessions === 'number' ? `${pkg.sessions} Sessions` : pkg.sessions}
-                                    </span>
-                                    <div className="text-right">
-                                        <div className="font-bold text-slate-900 dark:text-white">{pkg.price}</div>
-                                        {pkg.save && <div className="text-[10px] text-green-600 dark:text-green-400">{typeof pkg.save === 'string' && pkg.save.startsWith('Save') ? pkg.save : `Save ${pkg.save}`}</div>}
-                                        {pkg.save && !pkg.save.toString().startsWith('Save') && !pkg.save.toString().includes('Intensive') && !pkg.save.toString().includes('Hours') && <div className="sr-only">Savings available</div>}
-                                    </div>
-                                </div>
-                            ))}
-                        </div>
-                    </div>
-                </div>
-            )}
-
-            {/* CTA */}
-            <button className={`w-full py-3 px-4 rounded-lg font-semibold transition-all duration-200 border ${isSignature
-                    ? 'bg-primary text-white border-primary hover:bg-blue-600 hover:shadow-lg'
-                    : 'bg-white dark:bg-transparent text-primary border-primary hover:bg-blue-50 dark:hover:bg-blue-900/20'
-                }`}>
-                {service.cta}
+            {/* Toggle Button */}
+            <button
+                onClick={() => setIsExpanded(!isExpanded)}
+                className="w-full py-4 px-6 bg-gray-50 dark:bg-slate-800/40 border-t border-gray-100 dark:border-gray-800 text-slate-500 dark:text-slate-400 text-xs font-bold uppercase tracking-widest hover:text-primary hover:bg-gray-100 dark:hover:bg-slate-800/60 transition-colors flex items-center justify-center gap-2 group"
+            >
+                {isExpanded ? 'Hide Scope' : 'View Full Scope & Methodology'}
+                <span className={`material-icons-outlined text-base transition-transform duration-300 group-hover:translate-y-0.5 ${isExpanded ? 'rotate-180' : ''}`}>expand_more</span>
             </button>
+
+            {/* Expanded Content */}
+            <div className={`overflow-hidden transition-all duration-500 ease-in-out ${isExpanded ? 'max-h-[1000px] opacity-100' : 'max-h-0 opacity-0'}`}>
+                <div className="p-8 pt-4 bg-gray-50 dark:bg-slate-800/40 border-t border-gray-200 dark:border-gray-800/50">
+
+                    {/* Package Selector */}
+                    {hasPackages && (
+                        <div className="mb-8">
+                            <label className="block text-[10px] font-bold text-slate-400 uppercase tracking-widest mb-3">
+                                Select Package Duration
+                            </label>
+                            <div className="flex flex-wrap gap-2">
+                                {packages.map((pkg: any, idx: number) => (
+                                    <button
+                                        key={idx}
+                                        onClick={() => setSelectedPackageIdx(idx)}
+                                        className={`px-3 py-2 text-xs font-bold rounded border transition-all duration-200 ${selectedPackageIdx === idx
+                                                ? 'bg-white dark:bg-slate-700 text-slate-900 dark:text-white border-slate-300 dark:border-slate-500 shadow-sm'
+                                                : 'bg-transparent text-slate-500 border-transparent hover:bg-black/5 dark:hover:bg-white/5'
+                                            }`}
+                                    >
+                                        {pkg.sessions} Sessions
+                                    </button>
+                                ))}
+                            </div>
+                        </div>
+                    )}
+
+                    {/* Rich Text Content */}
+                    <div
+                        className="prose prose-sm prose-slate dark:prose-invert max-w-none text-slate-600 dark:text-slate-300 leading-relaxed"
+                        dangerouslySetInnerHTML={{ __html: service.deepContent }}
+                    />
+                </div>
+            </div>
         </div>
     );
 };
@@ -253,9 +267,9 @@ const ServicesApply: React.FC = () => {
 
     return (
         <>
-            {/* Integrated Services & Pricing Section */}
-            <section id="services" className="py-20 bg-surface-light dark:bg-surface-dark/30 transition-colors duration-300">
-                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            {/* Services Section */}
+            <section id="services" className="py-24 bg-surface-light dark:bg-surface-dark/30 transition-colors duration-300">
+                <div className="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="text-center mb-16">
                         <h2 className="font-display text-4xl font-bold text-slate-900 dark:text-white mb-6">Services & Pricing</h2>
                         <p className="text-lg text-slate-600 dark:text-slate-400 max-w-3xl mx-auto leading-relaxed">
@@ -263,21 +277,34 @@ const ServicesApply: React.FC = () => {
                         </p>
                     </div>
 
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 items-start">
-                        {servicesData.map((service) => (
+                    {/* Grid Layout: 1 col Mobile, 2 col Tablet, 3 col Desktop */}
+                    <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 lg:gap-8 items-start mb-16">
+                        {servicesPaths.map((service) => (
                             <ServiceCard key={service.id} service={service} />
                         ))}
                     </div>
 
-                    <div className="mt-16 text-center">
-                        <a href="#contact" className="inline-block text-slate-500 hover:text-primary transition-colors text-sm font-medium underline underline-offset-4 cursor-pointer">
-                            Existing Client? Click here for Alumni maintenance.
-                        </a>
+                    {/* Alumni Path 7 - Full Width Banner */}
+                    <div className="max-w-4xl mx-auto">
+                        <div className="bg-slate-900 dark:bg-slate-800 rounded-xl p-8 md:p-10 text-center shadow-xl relative overflow-hidden group">
+                            {/* Subtle geometric overlay */}
+                            <div className="absolute top-0 left-0 w-full h-full opacity-10 pointer-events-none bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-white to-transparent transform scale-150"></div>
+
+                            <h3 className="relative text-white font-display text-2xl font-bold mb-3">
+                                {alumniPath.title}
+                            </h3>
+                            <p className="relative text-blue-100 max-w-2xl mx-auto mb-8 text-lg leading-relaxed">
+                                {alumniPath.text}
+                            </p>
+                            <a
+                                href="mailto:shannon@theintegrativepractitioner.com?subject=Alumni%20Access%20Request"
+                                className="relative inline-block border-2 border-white/30 text-white hover:bg-white hover:text-slate-900 font-semibold py-3 px-8 rounded transition-all duration-300"
+                            >
+                                {alumniPath.linkText}
+                            </a>
+                        </div>
                     </div>
 
-                    <p className="text-center text-xs text-slate-400 mt-8 max-w-2xl mx-auto italic">
-                        * All packages include between-session email support and custom resources.
-                    </p>
                 </div>
             </section>
 
