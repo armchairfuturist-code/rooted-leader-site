@@ -7,9 +7,24 @@ export const NAV_LINKS: NavLink[] = [
 
 export const TESTIMONIALS: Testimonial[] = [
     {
-        quote: "It's been awesome being in this group and working together. I'm thrilled with the results! I've improved in so many areas I had not planned on. I'm sleeping better, eating much healthier, drinking more water... I've learned to be more open minded to change.",
+        quote: "When my daughter and I began working with Shannon, we just wanted to understand ADHD and make healthier choices. What we found was so much more. Her caring guidance helped us see the connection between food, focus, and emotional balance. We both feel clearer, calmer, and more empowered than ever before.",
+        author: "Mother of teenage client",
+        role: "Results achieved in just a couple of months"
+    },
+    {
+        quote: "My daily heartburn is gone, sugar cravings gone, IBS symptoms vastly improved, sleeping better, and I have no mid-day slump. And the best part is I lost 15 lbs and 12 total inches, including 4.25 inches around my waist. If that isn't progress, I don't know what is!",
+        author: "Busy Working Mother of Two",
+        role: "Results after a month"
+    },
+    {
+        quote: "Overall, I lost 10 lbs and 8 inches. I start my new job on Monday!",
+        author: "Terry",
+        role: "Results after a month"
+    },
+    {
+        quote: "It's been awesome being in this group and working together. I'm thrilled with the results! I've improved in so many areas I had not planned on. I'm sleeping better, eating much healthier, drinking more water, hardly any pop and refined sugar. I am exercising more and have way more energy. My skin has even improved. I've learned to be more open minded to change.",
         author: "Angie",
-        role: "Health + Life Coaching Client"
+        role: "Results after 2 months"
     },
     {
         quote: "I hemmed and hawed over joining this group for days before I bit the bullet. I'm so grateful that I did! For the first time in four years I feel like I have control over my diet, my decision making, my path in life.",
@@ -17,9 +32,14 @@ export const TESTIMONIALS: Testimonial[] = [
         role: "Health + Life Coaching Client"
     },
     {
-        quote: "Thank you for your time today, time spent reading what I sent, and the time you will spend putting things together for me. I feel like you really get me and I sense your genuine determination to help me... I have been praying to have hope.",
+        quote: "Thank you for your time today, time spent reading what I sent, and the time you will spend putting things together for me. I feel like you really get me and I sense your genuine determination to help me move past being in pain and symptoms. I have been praying to have hope and Faith in God's healing power. Our interactions spark my hope.",
         author: "Christina",
-        role: "Virtual Health Coaching Client"
+        role: "Health + Life Coaching Client"
+    },
+    {
+        quote: "To anyone reading, Shannon has been a true beacon and guide for me during some very intense moments of my journey. I've left her space feeling empowered and reminded of my True Nature. Deep integration is offered here!",
+        author: "Zaria",
+        role: "Somatic Coaching Client"
     }
 ];
 

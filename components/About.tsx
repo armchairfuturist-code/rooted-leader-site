@@ -72,8 +72,12 @@ const About: React.FC = () => {
                             "Master of Science (MS) in Counseling | Bachelor of Science (BS) in Marketing",
                             "Trained in Multiple Trauma Modalities | IFS-Informed (Internal Family Systems)",
                             "Certified Rehabilitation Counselor (CRC) - National Certification",
-                            "MAPS-Approved Training for Integration of Non-Ordinary States",
                             "Somatic Experiencing® Practitioner | Certified Rest & Restore™",
+                            "Reiki Master Teacher",
+                            "Certified Safe & Sound Practitioner (SSP)",
+                            "Certified Professional Life Coach & Guide",
+                            "Certified Holistic Health Coach",
+                            "MAPS-Approved Training for Integration of Non-Ordinary States | American center for the integration of spiritually transformative experiences",
                             "Apprenticeship in Two Shamanic Lineages | Usui Holy Fire, Karuna Ki Reiki Master"
                         ].map((cred, idx) => (
                             <div key={idx} className="flex items-start">

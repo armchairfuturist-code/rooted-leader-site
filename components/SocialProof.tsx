@@ -69,6 +69,34 @@ const SocialProof: React.FC = () => {
         }
     };
 
+    const scrollContainerRef = React.useRef<HTMLDivElement>(null);
+    const [canScrollLeft, setCanScrollLeft] = React.useState(false);
+    const [canScrollRight, setCanScrollRight] = React.useState(true);
+
+    const checkScrollPosition = () => {
+        if (scrollContainerRef.current) {
+            const { scrollLeft, scrollWidth, clientWidth } = scrollContainerRef.current;
+            setCanScrollLeft(scrollLeft > 0);
+            setCanScrollRight(scrollLeft < scrollWidth - clientWidth - 10);
+        }
+    };
+
+    React.useEffect(() => {
+        checkScrollPosition();
+        window.addEventListener('resize', checkScrollPosition);
+        return () => window.removeEventListener('resize', checkScrollPosition);
+    }, []);
+
+    const scroll = (direction: 'left' | 'right') => {
+        if (scrollContainerRef.current) {
+            const scrollAmount = scrollContainerRef.current.clientWidth * 0.8;
+            scrollContainerRef.current.scrollBy({
+                left: direction === 'left' ? -scrollAmount : scrollAmount,
+                behavior: 'smooth'
+            });
+        }
+    };
+
     return (
         <section id="testimonials" className="py-20 bg-white dark:bg-background-dark transition-colors duration-300">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -81,19 +109,72 @@ const SocialProof: React.FC = () => {
                     </p>
                 </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-                    {TESTIMONIALS.map((t) => (
-                        <div key={t.author} className="p-6 bg-white dark:bg-surface-dark border border-gray-100 dark:border-gray-800 rounded-xl shadow-sm relative group hover:shadow-md transition">
-                            <span className="material-icons-outlined text-blue-100 dark:text-blue-900/30 text-5xl absolute top-4 left-4">format_quote</span>
-                            <div className="relative z-10 pt-8">
-                                <p className="text-sm text-slate-600 dark:text-slate-300 italic mb-6">"{t.quote}"</p>
-                                <div className="text-right">
-                                    <p className="font-bold text-slate-900 dark:text-white text-sm">- {t.author}</p>
-                                    <p className="text-xs text-slate-500 dark:text-slate-500">{t.role}</p>
+                <div className="relative">
+                    {/* Left Navigation Arrow */}
+                    {canScrollLeft && (
+                        <button
+                            onClick={() => scroll('left')}
+                            className="absolute left-0 top-1/2 -translate-y-1/2 z-10 bg-white dark:bg-surface-dark shadow-lg rounded-full p-3 hover:bg-gray-50 dark:hover:bg-gray-800 transition-all duration-200 hidden md:block"
+                            aria-label="Scroll left"
+                        >
+                            <svg className="w-6 h-6 text-slate-900 dark:text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+                            </svg>
+                        </button>
+                    )}
+
+                    {/* Testimonials Container */}
+                    <div
+                        ref={scrollContainerRef}
+                        onScroll={checkScrollPosition}
+                        className="overflow-x-auto overflow-y-hidden scrollbar-hide"
+                        style={{
+                            scrollSnapType: 'x mandatory',
+                            scrollbarWidth: 'none',
+                            msOverflowStyle: 'none',
+                        }}
+                    >
+                        <div className="flex gap-6 pb-4" style={{ minWidth: 'min-content' }}>
+                            {TESTIMONIALS.map((t, index) => (
+                                <div
+                                    key={`${t.author}-${index}`}
+                                    className="flex-shrink-0 w-[90vw] sm:w-[400px] md:w-[450px] lg:w-[500px] p-8 bg-white dark:bg-surface-dark border border-gray-100 dark:border-gray-800 rounded-xl shadow-sm relative group hover:shadow-lg hover:border-gray-200 dark:hover:border-gray-700 transition-all duration-300"
+                                    style={{ scrollSnapAlign: 'start' }}
+                                >
+                                    <span className="material-icons-outlined text-blue-100 dark:text-blue-900/30 text-6xl absolute top-6 left-6">format_quote</span>
+                                    <div className="relative z-10 pt-10">
+                                        <p className="text-base text-slate-600 dark:text-slate-300 italic mb-8 leading-relaxed min-h-[120px]">
+                                            "{t.quote}"
+                                        </p>
+                                        <div className="border-t border-gray-100 dark:border-gray-800 pt-4">
+                                            <p className="font-bold text-slate-900 dark:text-white text-sm">— {t.author}</p>
+                                            <p className="text-xs text-slate-500 dark:text-slate-500 mt-1 italic">{t.role}</p>
+                                        </div>
+                                    </div>
                                 </div>
-                            </div>
+                            ))}
                         </div>
-                    ))}
+                    </div>
+
+                    {/* Right Navigation Arrow */}
+                    {canScrollRight && (
+                        <button
+                            onClick={() => scroll('right')}
+                            className="absolute right-0 top-1/2 -translate-y-1/2 z-10 bg-white dark:bg-surface-dark shadow-lg rounded-full p-3 hover:bg-gray-50 dark:hover:bg-gray-800 transition-all duration-200 hidden md:block"
+                            aria-label="Scroll right"
+                        >
+                            <svg className="w-6 h-6 text-slate-900 dark:text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                            </svg>
+                        </button>
+                    )}
+                </div>
+
+                {/* Scroll Indicator for Mobile */}
+                <div className="text-center mt-6 md:hidden">
+                    <p className="text-xs text-slate-400 dark:text-slate-600">
+                        ← Swipe to see more testimonials →
+                    </p>
                 </div>
             </div>
         </section>
