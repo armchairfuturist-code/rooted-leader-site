@@ -118,6 +118,12 @@ export const SOCIAL_LINKS = [
         href: 'https://theintegrativepractitioner.substack.com/',
         iconText: 'S', // Or an appropriate icon/character
         colorClass: 'text-orange-500'
+    },
+    {
+        label: 'Email',
+        href: 'mailto:shannon@theintegrativecounselor.com',
+        iconText: 'E',
+        colorClass: 'text-primary'
     }
 ];
 

@@ -43,9 +43,6 @@ const Navbar: React.FC = () => {
 
                     {/* Desktop Actions */}
                     <div className="hidden md:flex items-center space-x-4">
-                        <a href="mailto:shannon@theintegrativecounselor.com" className="flex items-center text-sm font-medium hover:text-primary transition">
-                            <span className="material-icons-outlined text-sm mr-1">email</span> E-mail
-                        </a>
                         <a href="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ32NV8hog7MELSS-3L0-Ty-m6062yDiJvXZPdqt-ws-fTZMqSZKISlC9eOPyff4iXubkZKING9x" target="_blank" rel="noopener noreferrer" className="bg-primary hover:bg-blue-600 text-white px-4 py-2 rounded text-sm font-medium transition shadow-sm hover:shadow-md">
                             Schedule as an Existing Client
                         </a>
@@ -90,9 +87,6 @@ const Navbar: React.FC = () => {
                             onClick={() => setIsMobileMenuOpen(false)}
                         >
                             The Substack
-                        </a>
-                        <a href="mailto:shannon@theintegrativecounselor.com" className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 dark:text-gray-200 hover:text-primary hover:bg-gray-50 dark:hover:bg-gray-800">
-                            E-mail
                         </a>
                         <a href="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ32NV8hog7MELSS-3L0-Ty-m6062yDiJvXZPdqt-ws-fTZMqSZKISlC9eOPyff4iXubkZKING9x" target="_blank" rel="noopener noreferrer" className="block w-full text-left px-3 py-2 rounded-md text-base font-medium text-primary hover:bg-gray-50 dark:hover:bg-gray-800">
                             Schedule as an Existing Client
