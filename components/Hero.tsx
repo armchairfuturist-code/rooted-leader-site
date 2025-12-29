@@ -11,7 +11,7 @@ const Hero: React.FC = () => {
                         <div className="inline-flex items-center space-x-2 bg-blue-50 dark:bg-blue-900/30 px-3 py-1 rounded-full border border-blue-100 dark:border-blue-800">
                             <span className="material-icons-outlined text-primary text-xs">verified</span>
                             <span className="text-xs font-semibold text-primary uppercase tracking-wide">
-                                Internationally Acclaimed Trauma & Nervous System Expert
+                                Advanced Nervous System Regulation & Somatic Trauma Integration
                             </span>
                         </div>
 
@@ -22,7 +22,7 @@ const Hero: React.FC = () => {
                         </h1>
 
                         <p className="text-lg text-slate-600 dark:text-slate-400 max-w-lg leading-relaxed">
-                            For Founders, Leaders, Visionaries, and Seekers ready to move beyond conventional approaches and cultivate sustainable resilience from the inside out, through an integrative path to regulate, integrate, and awaken.
+                            A clinical, polyvagal-informed approach to healing complex trauma and burnout for high-functioning leaders, founders, visionaries, and seekers. Move beyond conventional approaches and cultivate sustainable resilience from the inside out.
                         </p>
 
                         <div className="flex flex-col sm:flex-row gap-4">

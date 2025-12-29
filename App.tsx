@@ -17,9 +17,9 @@ const App: React.FC = () => {
       <ProblemSolution />
       <Methodology />
       <About />
-      <SocialProof />
       <ServicesApply />
       <InsightsConnect />
+      <SocialProof />
       <Footer />
     </div>
   );

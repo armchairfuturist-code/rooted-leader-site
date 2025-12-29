@@ -7,14 +7,14 @@ const About: React.FC = () => {
             <section id="about" className="py-20 bg-white dark:bg-background-dark transition-colors duration-300">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
-                        
+
                         {/* Image Column */}
                         <div className="lg:col-span-5 relative">
                             <div className="sticky top-24">
                                 <div className="rounded-2xl overflow-hidden shadow-2xl relative">
-                                    <img 
-                                        src="/shan.jpg" 
-                                        alt="Shannon Myers" 
+                                    <img
+                                        src="/shan.jpg"
+                                        alt="Shannon Myers"
                                         className="w-full h-auto object-contain"
                                     />
                                     {/* Gradient overlay for depth */}
@@ -28,13 +28,13 @@ const About: React.FC = () => {
                         {/* Text Content */}
                         <div className="lg:col-span-7">
                             <span className="inline-block bg-blue-50 dark:bg-blue-900/30 text-primary text-xs font-semibold px-2 py-1 rounded mb-4">
-                                Internationally Acclaimed Expert
+                                Internationally Acclaimed Somatic Trauma Specialist & Executive Consultant
                             </span>
                             <h2 className="font-display text-4xl font-bold text-slate-900 dark:text-white mb-2">Shannon Myers, MS, SEP</h2>
                             <h3 className="text-lg text-slate-500 dark:text-slate-400 italic mb-8">
                                 Guiding Individuals from Trauma to Transformation since 2012
                             </h3>
-                            
+
                             <div className="prose dark:prose-invert text-slate-600 dark:text-slate-400 text-sm leading-relaxed space-y-4">
                                 <p>It is a crisis no one names. We look rich on paper, yet we have never been poorer in spirit. We are living in a time of record lows in satisfaction and record highs in despair, and the body is keeping score.</p>
                                 <p>You checked the boxes. You built the career. You hit the goals society handed you. Yet you are exhausted, anxious, and disconnected—a stranger in your own body, despite doing everything right.</p>
@@ -66,7 +66,7 @@ const About: React.FC = () => {
                         </div>
                         <h3 className="font-display text-2xl font-bold text-slate-900 dark:text-white">Expertise & Credentials</h3>
                     </div>
-                    
+
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-6">
                         {[
                             "Master of Science (MS) in Counseling | Bachelor of Science (BS) in Marketing",
