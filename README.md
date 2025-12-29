@@ -205,51 +205,53 @@ Antigravity is likely a desktop application you download. Once you have installe
     *   Once it downloads, a popup will ask "Would you like to open the cloned repository?"
     *   Click **Open**.
 
-### Phase 2: Setup the Environment (The "Yarn" Step)
+### Phase 2: Setup the Environment (The "Node/Yarn" Step)
 
 Your computer doesn't know about the project's tools yet (Node, Yarn, etc.) like Cloud Shell did. Antigravity should handle this, but you need to trigger it.
 
-1.  **Open the Terminal:**
-    *   In Antigravity, look at the top menu: **Terminal > New Terminal**. (It usually appears at the bottom).
+1. **Open the Terminal:**
+    * In Antigravity, look at the top menu: **Terminal > New Terminal**. (It usually appears at the bottom).
+2. **Install Dependencies:**
+    * Type this command and hit Enter:
 
-2.  **Install Dependencies:**
-    *   Type this command and hit Enter:
-        ```bash
-        yarn
-        ```
-    *   *Note:* If it says "yarn command not found," you might need to install Node.js on your computer first. However, Antigravity usually includes these tools or asks to install them for you.
+```bash
+yarn
+```
+
+    * *Note:* If it says "yarn command not found," you might need to install Node.js on your computer first. However, Antigravity usually includes these tools or asks to install them for you.
 
 ### Phase 3: The "Agentic" Workflow (Making Changes)
 
 This is where Antigravity shines. Instead of just typing code, you can use the AI agent.
 
-1.  **Run the Dev Server:**
-    *   In the terminal, type:
-        ```bash
-        yarn dev
-        ```
-    *   It will give you a local URL (e.g., `http://localhost:5173`).
-    *   **Ctrl + Click** that link to open your site in your Chrome browser.
+1. **Run the Dev Server:**
+    * In the terminal, type:
 
-2.  **Make a Change (The AI Way):**
-    *   Locate the **Agent Sidebar** (usually on the right or left, looking like a sparkle or robot icon).
-    *   Type a command like: *"Update the Hero section text to say 'Welcome to the Future' and make the background slightly darker."*
-    *   The Agent will read your files, plan the change, and present it to you.
-    *   **Accept** the changes if they look good.
+```bash
+yarn dev
+```
+
+    * It will give you a local URL (e.g., `http://localhost:5173`).
+    * **Ctrl + Click** that link to open your site in your Chrome browser.
+2. **Make a Change (The AI Way):**
+    * Locate the **Agent Sidebar** (usually on the right or left, looking like a sparkle or robot icon).
+    * Type a command like: *"Update the Hero section text to say 'Welcome to the Future' and make the background slightly darker."*
+    * The Agent will read your files, plan the change, and present it to you.
+    * **Accept** the changes if they look good.
 
 ### Phase 4: Saving to the Vault (Syncing)
 
 When you are done working in Antigravity, you **must** send the changes to GitHub so your Cloud Shell (and your automated deployment robot) can see them.
 
-1.  **Click the "Source Control" Icon:**
-    *   It looks like a branch `Y` icon on the sidebar.
-2.  **Stage & Commit:**
-    *   You will see a list of changed files.
-    *   Type a message in the box (e.g., "Updated hero text via Antigravity").
-    *   Click the **Commit** (or checkmark) button.
-3.  **Sync (Push):**
-    *   Click the big blue **Sync Changes** button (or `Push`).
-    *   *First time setup:* It will likely open your browser to ask you to log in to GitHub. Authorize it.
+1. **Click the "Source Control" Icon:**
+    * It looks like a branch `Y` icon on the sidebar.
+2. **Stage \& Commit:**
+    * You will see a list of changed files.
+    * Type a message in the box (e.g., "Updated hero text via Antigravity").
+    * Click the **Commit** (or checkmark) button.
+3. **Sync (Push):**
+    * Click the big blue **Sync Changes** button (or `Push`).
+    * *First time setup:* It will likely open your browser to ask you to log in to GitHub. Authorize it.
 
 ---
 
@@ -257,15 +259,90 @@ When you are done working in Antigravity, you **must** send the changes to GitHu
 
 If you travel and want to use Cloud Shell again, you just need to update it with the work you did in Antigravity.
 
-1.  Open Cloud Shell.
-2.  Type:
-    ```bash
-    git pull
-    ```
-3.  That's it! Cloud Shell now matches Antigravity.
+1. Open Cloud Shell.
+2. Type:
+
+```bash
+git pull
+```
+
+3. That's it! Cloud Shell now matches Antigravity.
 
 ### Summary Checklist for Antigravity
-1.  **Clone** your repo using the GitHub URL.
-2.  Run **`yarn`** to install tools.
-3.  Run **`yarn dev`** to preview.
-4.  **Sync/Push** changes via the Source Control tab to trigger the live deployment.
+
+1. **Clone** your repo using the GitHub URL.
+2. Run **`yarn`** to install tools.
+3. Run **`yarn dev`** to preview.
+4. **Sync/Push** changes via the Source Control tab to trigger the live deployment.
+
+Here are your updated instructions with npm in place of yarn. I kept all other content and structure unchanged.
+
+### Phase 2: Setup the Environment (The "NPM" Step)
+
+Your computer doesn't know about the project's tools yet (Node, npm, etc.) like Cloud Shell did. Antigravity should handle this, but you need to trigger it.
+
+1. **Open the Terminal:**
+    * In Antigravity, look at the top menu: **Terminal > New Terminal**. (It usually appears at the bottom).
+2. **Install Dependencies:**
+    * Type this command and hit Enter:
+
+```bash
+npm install
+```
+
+    * *Note:* If npm isn't installed, you might need to install Node.js on your computer first. However, Antigravity usually includes these tools or asks to install them for you.
+
+### Phase 3: The "Agentic" Workflow (Making Changes)
+
+This is where Antigravity shines. Instead of just typing code, you can use the AI agent.
+
+1. **Run the Dev Server:**
+    * In the terminal, type:
+
+```bash
+npm run dev
+```
+
+    * It will give you a local URL (e.g., `http://localhost:5173`).
+    * **Ctrl + Click** that link to open your site in your Chrome browser.
+2. **Make a Change (The AI Way):**
+    * Locate the **Agent Sidebar** (usually on the right or left, looking like a sparkle or robot icon).
+    * Type a command like: *"Update the Hero section text to say 'Welcome to the Future' and make the background slightly darker."*
+    * The Agent will read your files, plan the change, and present it to you.
+    * **Accept** the changes if they look good.
+
+### Phase 4: Saving to the Vault (Syncing)
+
+When you are done working in Antigravity, you **must** send the changes to GitHub so your Cloud Shell (and your automated deployment robot) can see them.
+
+1. **Click the "Source Control" Icon:**
+    * It looks like a branch `Y` icon on the sidebar.
+2. **Stage \& Commit:**
+    * You will see a list of changed files.
+    * Type a message in the box (e.g., "Updated hero text via Antigravity").
+    * Click the **Commit** (or checkmark) button.
+3. **Sync (Push):**
+    * Click the big blue **Sync Changes** button (or `Push`).
+    * *First time setup:* It will likely open your browser to ask you to log in to GitHub. Authorize it.
+
+***
+
+### How to keep "Cloud Shell" working
+
+If you travel and want to use Cloud Shell again, you just need to update it with the work you did in Antigravity.
+
+1. Open Cloud Shell.
+2. Type:
+
+```bash
+git pull
+```
+
+3. That's it! Cloud Shell now matches Antigravity.
+
+### Summary Checklist for Antigravity
+
+1. **Clone** your repo using the GitHub URL.
+2. Run **`npm install`** to install tools.
+3. Run **`npm run dev`** to preview.
+4. **Sync/Push** changes via the Source Control tab to trigger the live deployment.
