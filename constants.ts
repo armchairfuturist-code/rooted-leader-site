@@ -40,6 +40,16 @@ export const TESTIMONIALS: Testimonial[] = [
         quote: "To anyone reading, Shannon has been a true beacon and guide for me during some very intense moments of my journey. I've left her space feeling empowered and reminded of my True Nature. Deep integration is offered here!",
         author: "Zaria",
         role: "Somatic Coaching Client"
+    },
+    {
+        quote: "What an amazing session we had! I think my procrastinator child feels loved and accepted and valued for the first time in my life. I have this seed of peace in myself now that I can nurture and grow. It is no longer something I am fighting against. Thank you!!!",
+        author: "Business Executive with ADHD",
+        role: "Coaching Client"
+    },
+    {
+        quote: "This being has helped me beyond comprehension. The knowledge she has bestowed upon me through her selfless pursuit of us to self-heal has been astounding. Beyond. Quantum. She is a true healer. And through adversity she persists. I’m so happy to have worked with her and look forward to all that she contributes to this world. Her work is a one-stop-shop for ALL perspective shifts. It is Ad Astra Per Aspera.",
+        author: "Inner Healer",
+        role: "Client"
     }
 ];
 

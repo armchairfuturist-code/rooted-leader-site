@@ -69,16 +69,17 @@ const About: React.FC = () => {
 
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-6">
                         {[
+                            "25 Years Business Experience | 15 Years Business Owner | 15 Years Integrative Practitioner",
                             "Master of Science (MS) in Counseling | Bachelor of Science (BS) in Marketing",
-                            "Trained in Multiple Trauma Modalities | IFS-Informed (Internal Family Systems)",
                             "Certified Rehabilitation Counselor (CRC) - National Certification",
-                            "Somatic Experiencing® Practitioner | Certified Rest & Restore™",
-                            "Reiki Master Teacher",
-                            "Certified Safe & Sound Practitioner (SSP)",
-                            "Certified Professional Life Coach & Guide",
-                            "Certified Holistic Health Coach",
-                            "MAPS-Approved Training for Integration of Non-Ordinary States | American center for the integration of spiritually transformative experiences",
-                            "Apprenticeship in Two Shamanic Lineages | Usui Holy Fire, Karuna Ki Reiki Master"
+                            "Trained in Multiple Trauma Modalities | Somatic Experiencing® Practitioner",
+                            "Safe and Sound Protocol™ (SSP) Practitioner | Rest & Restore Protocol™ (RRP)",
+                            "Internal Family Systems (IFS) Informed | Polyvagal Theory Trained",
+                            "Certified Professional Life Coach & Guide | Certified Holistic Health Coach",
+                            "MAPS-Approved Training for Integration of Non-Ordinary States",
+                            "American Center for The Integration of Spiritually Transformative Experiences Member",
+                            "Usui Holy Fire Reiki Master & Teacher | Karuna Ki Reiki Master and Teacher",
+                            "Apprenticeship in Two Shamanic Lineages"
                         ].map((cred, idx) => (
                             <div key={idx} className="flex items-start">
                                 <span className="material-icons-outlined text-primary mr-3 text-sm mt-1">verified</span>
