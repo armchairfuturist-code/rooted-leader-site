@@ -2,7 +2,7 @@ import React from 'react';
 
 const Hero: React.FC = () => {
     return (
-        <header className="relative min-h-[90vh] flex items-center justify-center overflow-hidden">
+        <header className="relative min-h-screen flex items-center justify-center overflow-hidden">
             {/* Background Image */}
             <div className="absolute inset-0 z-0">
                 <img
@@ -59,8 +59,8 @@ const Hero: React.FC = () => {
             </div>
 
             {/* Scroll Indicator */}
-            <div className="absolute bottom-10 left-1/2 -translate-x-1/2 z-20 animate-bounce opacity-80 cursor-pointer">
-                <span className="material-icons-outlined text-white text-3xl md:text-4xl">expand_more</span>
+            <div className="absolute bottom-10 left-1/2 -translate-x-1/2 z-20 animate-bounce opacity-80 cursor-pointer hidden md:block">
+                <span className="material-icons-outlined text-white text-4xl">expand_more</span>
             </div>
         </header>
     );
