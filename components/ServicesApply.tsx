@@ -25,19 +25,24 @@ const servicesPaths = [
     {
         id: "path-2",
         pathLabel: "PATH 2",
-        category: "DEEP HEALING",
-        title: "Integrative Somatics & Trauma",
-        subtitle: "Restoring Capacity & Biological Safety",
-        intent: "We are not talking about trauma; we are doing something about it. Metabolize the physiology of the threat response so you can return to the present.",
+        category: "DEEP HEALING & INTEGRATION",
+        title: "Somatics & Trauma Integration",
+        subtitle: "Restoring Safety & Navigating the Unseen",
+        intent: "We are not talking about trauma; we are doing something about it. Metabolize the physiology of the threat response so you can return to the present. Simultaneously, we stabilize the nervous system to make meaning of peak experiences—a hybrid of Trauma Healing and Transpersonal Coaching.",
         defaultPrice: 1500,
         perSessionRate: 250,
         deepContent: `
       <h4 class="text-sm font-bold uppercase tracking-widest text-slate-900 dark:text-white mb-2 mt-4">The Integrative Toolset</h4>
       <p class="mb-4">A bespoke blend of Somatic Experiencing (SE™) to discharge survival energy, IFS to unburden protective parts, and Polyvagal Mapping to learn your nervous system's language.</p>
+      
       <h4 class="text-sm font-bold uppercase tracking-widest text-slate-900 dark:text-white mb-2 mt-4">Metabolizing the '4 Fs'</h4>
       <p class="mb-4">Whether you are stuck in Fight (irritation), Flight (anxiety), Freeze (numbness), or Fawn (people-pleasing), we gently discharge the mobilized energy or 'thaw' the immobility.</p>
+
+      <h4 class="text-sm font-bold uppercase tracking-widest text-slate-900 dark:text-white mb-2 mt-4">Psychedelic & Mystical Integration</h4>
+      <p class="mb-4">Anchoring 'Peak Experiences' into daily behavior. We use somatic titration to resolve difficult trips, closing open loops and establishing safety.</p>
+
       <h4 class="text-sm font-bold uppercase tracking-widest text-slate-900 dark:text-white mb-2 mt-4">Scope of Practice</h4>
-      <p class="mb-4">Complex Trauma, Developmental Wounds, Narcissistic Abuse Recovery, Shock Trauma, and Chronic Stress/Burnout.</p>
+      <p class="mb-4">Complex Trauma, Developmental Wounds, Shock Trauma, Chronic Stress, Psychedelic Integration, Spiritual Emergence ('Dark Nights'), and Ancestral/Karmic Clearing.</p>
     `,
         packages: [
             { sessions: 6, price: 1500, label: "6-Session Package", save: "$75" },
@@ -49,22 +54,39 @@ const servicesPaths = [
     {
         id: "path-3",
         pathLabel: "PATH 3",
-        category: "SPIRITUAL INTEGRATION",
-        title: "Mystical & Transpersonal Integration",
-        subtitle: "Navigating the Unseen & The Expanded Self",
-        intent: "A hybrid of Trauma Healing and Transpersonal Coaching. We stabilize the nervous system to make meaning of peak experiences.",
-        defaultPrice: 1500,
+        category: "AUDITORY REGULATION & SOMATICS",
+        title: "The Safe & Sound Somatic Pathway",
+        subtitle: "Auditory Vagus Nerve Regulation & Trauma Resolution",
+        intent: "This pathway is designed to retune your nervous system’s 'Safety Settings' using a specific blend of auditory intervention and somatic containment. We combine the acoustic technology of the Safe & Sound Protocol (SSP) with the biological safety of Somatic Experiencing (SE™).",
+        defaultPrice: 3000,
         perSessionRate: 250,
         deepContent: `
       <h4 class="text-sm font-bold uppercase tracking-widest text-slate-900 dark:text-white mb-2 mt-4">The Methodology</h4>
-      <p class="mb-4">Anchoring 'Peak Experiences' into daily behavior. We use somatic titration to resolve difficult trips, closing open loops and establishing safety.</p>
-      <h4 class="text-sm font-bold uppercase tracking-widest text-slate-900 dark:text-white mb-2 mt-4">The Scope</h4>
-      <p class="mb-4">Psychedelic Integration, Spiritual Emergence ('Dark Nights'), Ancestral/Karmic Clearing, and processing Mystical Experiences without fear.</p>
+      <p class="mb-4"><strong>The SSP:</strong> Uses filtered music to stimulate the Vagus Nerve and reset the "Social Engagement System." <br/><strong>The Somatics:</strong> We do not just listen; we map the body’s response using SE™ and Parts Work to negotiate safety.</p>
+      
+      <h4 class="text-sm font-bold uppercase tracking-widest text-slate-900 dark:text-white mb-2 mt-4">Prerequisite & Safety</h4>
+      <p class="mb-4">Auditory intervention is powerful. Not everyone is ready to start with sound immediately. During our Initial Session, I will assess your nervous system's capacity. If not yet ready, we begin with standard Integrative Somatics (Path 2) to build safety first.</p>
+
+      <h4 class="text-sm font-bold uppercase tracking-widest text-slate-900 dark:text-white mb-2 mt-4">Investment Includes</h4>
+      <ul class="list-disc pl-5 mb-4 space-y-1">
+        <li><strong>Annual SSP License:</strong> 1-Year Access to the SSP App & Digital Library ($300 Value).</li>
+        <li><strong>12 Private Sessions:</strong> Dedicated co-regulation, trauma processing, and listening support (50 mins).</li>
+      </ul>
+
+      <div class="bg-blue-50 dark:bg-slate-800/50 p-4 rounded-lg my-4 border border-blue-100 dark:border-slate-700">
+        <h4 class="text-sm font-bold uppercase tracking-widest text-slate-900 dark:text-white mb-2">Group Track Option ("Vagus Nerve Reset")</h4>
+        <p class="mb-2 text-sm">For those seeking co-regulation in a small, safe group environment (3–6 Participants).</p>
+        <p class="font-bold text-slate-900 dark:text-white">$1,000 Total / Person</p>
+        <p class="text-xs text-slate-500 mt-1">Includes 12-Week Online Cohort + License. Requires enrollment.</p>
+      </div>
+
+      <div class="mt-4">
+        <p class="text-xs font-bold uppercase tracking-widest text-primary mb-1">Coming Soon</p>
+        <p class="text-sm">The Rest & Restore™ Protocol: A sound-based intervention for rest and regulation. <a href="#" class="underline">Join the waitlist.</a></p>
+      </div>
     `,
         packages: [
-            { sessions: 6, price: 1500, label: "6-Session Package", save: "$75" },
-            { sessions: 12, price: 3000, label: "12-Session Package", save: "$300" },
-            { sessions: 24, price: 6000, label: "24-Session Package", save: "$600" }
+            { sessions: 12, price: 3000, label: "12-Session Protocol", save: "10% off Pay-in-Full ($2700)" }
         ],
         ctaLink: "https://docs.google.com/forms/d/e/1FAIpQLSdMdvumB1DSyqxR0BfeBqPkB1a1Zuo_mBkX81yzs2AQZEhKBA/viewform"
     },

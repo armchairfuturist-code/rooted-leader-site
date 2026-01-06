@@ -22,7 +22,7 @@ const Hero: React.FC = () => {
                         </h1>
 
                         <p className="text-lg text-slate-600 dark:text-slate-400 max-w-lg leading-relaxed">
-                            A clinical, polyvagal-informed approach to healing complex trauma and burnout for high-functioning leaders, founders, visionaries, and seekers. Move beyond conventional approaches and cultivate sustainable resilience from the inside out.
+                            A neuroscience & polyvagal-informed approach to healing complex trauma and burnout for high-functioning leaders, founders, visionaries, and seekers. Move beyond conventional approaches and cultivate sustainable resilience from the inside out.
                         </p>
 
                         <div className="flex flex-col sm:flex-row gap-4">
