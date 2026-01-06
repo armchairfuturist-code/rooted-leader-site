@@ -6,8 +6,8 @@ const Hero: React.FC = () => {
             {/* Background Image */}
             <div className="absolute inset-0 z-0">
                 <img
-                    src="https://images.pexels.com/photos/414171/pexels-photo-414171.jpeg?auto=compress&cs=tinysrgb&w=2560"
-                    alt="Serene mountain lake landscape with clear reflections and deep perspective"
+                    src="https://images.pexels.com/photos/775201/pexels-photo-775201.jpeg?auto=compress&cs=tinysrgb&w=2560"
+                    alt="Ethereal misty lake with distant mountains at dawn, creating a profound sense of calm"
                     className="w-full h-full object-cover"
                 />
                 {/* Overlay - Darker gradient for readability without blur */}
