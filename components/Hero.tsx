@@ -2,50 +2,65 @@ import React from 'react';
 
 const Hero: React.FC = () => {
     return (
-        <header className="relative pt-16 pb-24 overflow-hidden">
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <header className="relative min-h-[90vh] flex items-center justify-center overflow-hidden">
+            {/* Background Image */}
+            <div className="absolute inset-0 z-0">
+                <img
+                    src="https://images.pexels.com/photos/917494/pexels-photo-917494.jpeg?auto=compress&cs=tinysrgb&w=2560"
+                    alt="Serene misty forest with soft green tones and clinical-organic feel"
+                    className="w-full h-full object-cover"
+                />
+                {/* Overlay - Darker gradient for readability without blur */}
+                <div className="absolute inset-0 bg-gradient-to-b from-slate-900/60 via-slate-900/40 to-slate-900/60"></div>
+            </div>
 
-                    {/* Left Content */}
-                    <div className="space-y-8 animate-fade-in-up">
-                        <div className="inline-flex items-center space-x-2 bg-blue-50 dark:bg-blue-900/30 px-3 py-1 rounded-full border border-blue-100 dark:border-blue-800">
-                            <span className="material-icons-outlined text-primary text-xs">verified</span>
-                            <span className="text-xs font-semibold text-primary uppercase tracking-wide">
-                                Advanced Nervous System Regulation & Somatic Trauma Integration
-                            </span>
-                        </div>
-
-                        <h1 className="font-display text-5xl md:text-6xl font-bold text-slate-900 dark:text-white leading-tight">
-                            Beyond Surface Solutions: <br />
-                            <span className="text-primary">Reclaim Your Wholeness.</span><br />
-                            <span className="text-primary">Integrate Your Power.</span>
-                        </h1>
-
-                        <p className="text-lg text-slate-600 dark:text-slate-400 max-w-lg leading-relaxed">
-                            A neuroscience & polyvagal-informed approach to healing complex trauma and burnout for high-functioning leaders, founders, visionaries, and seekers. Move beyond conventional approaches and cultivate sustainable resilience from the inside out.
-                        </p>
-
-                        <div className="flex flex-col sm:flex-row gap-4">
-                            <a href="https://nervous-system-quiz-391148693749.us-west1.run.app/" target="_blank" rel="noopener noreferrer" className="bg-primary hover:bg-blue-600 text-white px-8 py-4 rounded-lg font-bold transition flex items-center justify-center shadow-lg hover:shadow-xl transform hover:-translate-y-1 text-lg">
-                                <span className="material-icons-outlined mr-3 text-2xl">quiz</span> Assess Your Nervous System Baseline
-                            </a>
-                        </div>
+            {/* Content */}
+            <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                <div className="animate-fade-in-up space-y-8">
+                    {/* Badge */}
+                    <div className="inline-flex items-center space-x-2 bg-white/10 backdrop-blur-md px-4 py-1.5 rounded-full border border-white/20 shadow-sm">
+                        <span className="material-icons-outlined text-white/90 text-sm">verified</span>
+                        <span className="text-xs md:text-sm font-medium text-white/90 uppercase tracking-wider">
+                            Advanced Nervous System Regulation
+                        </span>
                     </div>
 
-                    {/* Right Image */}
-                    <div className="relative">
-                        <div className="absolute -inset-4 bg-gradient-to-r from-blue-100 to-purple-100 dark:from-blue-900/20 dark:to-purple-900/20 rounded-2xl blur-xl opacity-70"></div>
-                        <img
-                            src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&q=80&w=1200"
-                            alt="A large tree in a forest with its roots visible and sunlight filtering through the branches, symbolizing root healing."
-                            className="relative rounded-xl shadow-2xl w-full object-cover h-[500px]"
-                        />
-                        <div className="absolute bottom-6 right-6 bg-white/90 dark:bg-slate-800/90 backdrop-blur px-4 py-2 rounded-lg shadow-lg text-xs font-medium text-slate-600 dark:text-slate-300">
-                            Tens of thousands of leaders empowered
-                        </div>
-                    </div>
+                    {/* Headline */}
+                    <h1 className="font-display text-5xl md:text-7xl lg:text-8xl font-bold text-white leading-tight tracking-tight drop-shadow-lg">
+                        Beyond Surface Solutions: <br />
+                        <span className="text-blue-100 italic">Reclaim Your Wholeness.</span><br />
+                        <span className="text-emerald-100 italic">Integrate Your Power.</span>
+                    </h1>
 
+                    {/* Subheadline */}
+                    <p className="font-body text-xl md:text-2xl text-slate-100 max-w-3xl mx-auto leading-relaxed drop-shadow-md font-light">
+                        A neuroscience & polyvagal-informed approach to healing complex trauma and burnout for high-functioning leaders. Move beyond conventional approaches and cultivate sustainable resilience.
+                    </p>
+
+                    {/* CTA */}
+                    <div className="flex flex-col sm:flex-row gap-5 justify-center pt-4">
+                        <a
+                            href="https://nervous-system-quiz-391148693749.us-west1.run.app/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="group bg-primary hover:bg-blue-500 text-white text-lg px-10 py-4 rounded-md font-semibold transition-all duration-300 shadow-xl hover:shadow-2xl hover:-translate-y-1 flex items-center justify-center tracking-wide"
+                        >
+                            Assess Your Nervous System
+                            <span className="material-icons-outlined ml-2 group-hover:translate-x-1 transition-transform">arrow_forward</span>
+                        </a>
+                        <a
+                            href="#services"
+                            className="group bg-white/10 hover:bg-white/20 backdrop-blur-md text-white border border-white/30 text-lg px-10 py-4 rounded-md font-semibold transition-all duration-300 shadow-lg hover:shadow-xl hover:-translate-y-1 flex items-center justify-center"
+                        >
+                            View Integration Paths
+                        </a>
+                    </div>
                 </div>
+            </div>
+
+            {/* Scroll Indicator */}
+            <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce opacity-70">
+                <span className="material-icons-outlined text-white text-4xl">keyboard_arrow_down</span>
             </div>
         </header>
     );

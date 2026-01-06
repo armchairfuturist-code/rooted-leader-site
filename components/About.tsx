@@ -58,16 +58,27 @@ const About: React.FC = () => {
             </section>
 
             {/* Expertise & Credentials Strip */}
-            <section className="py-16 bg-blue-50 dark:bg-surface-dark/50 border-y border-blue-100 dark:border-gray-800 transition-colors duration-300">
-                <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-                    <div className="text-center mb-10">
-                        <div className="inline-flex items-center justify-center p-2 bg-white dark:bg-surface-dark rounded-full shadow-sm mb-4">
-                            <span className="material-icons-outlined text-primary">school</span>
+            <section className="relative py-24 overflow-hidden">
+                {/* Background Image */}
+                <div className="absolute inset-0 z-0">
+                    <img
+                        src="https://images.pexels.com/photos/775201/pexels-photo-775201.jpeg?auto=compress&cs=tinysrgb&w=2560"
+                        alt="Ethereal misty lake with distant mountains"
+                        className="w-full h-full object-cover"
+                    />
+                    <div className="absolute inset-0 bg-slate-950/75"></div>
+                </div>
+
+                <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div className="text-center mb-16">
+                        <div className="inline-flex items-center justify-center w-16 h-16 bg-white/10 backdrop-blur-md rounded-full border border-white/20 shadow-xl mb-6">
+                            <span className="material-icons-outlined text-primary text-3xl">school</span>
                         </div>
-                        <h3 className="font-display text-2xl font-bold text-slate-900 dark:text-white">Expertise & Credentials</h3>
+                        <h3 className="font-display text-3xl md:text-4xl font-bold text-white mb-2 drop-shadow-md">Expertise & Credentials</h3>
+                        <p className="text-slate-400 uppercase tracking-widest text-xs font-medium">Professional Qualifications & Specialized Training</p>
                     </div>
 
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-6">
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-x-16 gap-y-8">
                         {[
                             "25 Years Business Experience | 15 Years Business Owner | 15 Years Integrative Practitioner",
                             "Master of Science (MS) in Counseling | Bachelor of Science (BS) in Marketing",
@@ -81,9 +92,9 @@ const About: React.FC = () => {
                             "Usui Holy Fire Reiki Master & Teacher | Karuna Ki Reiki Master and Teacher",
                             "Apprenticeship in Two Shamanic Lineages"
                         ].map((cred, idx) => (
-                            <div key={idx} className="flex items-start">
-                                <span className="material-icons-outlined text-primary mr-3 text-sm mt-1">verified</span>
-                                <span className="text-xs md:text-sm text-slate-700 dark:text-slate-300">{cred}</span>
+                            <div key={idx} className="flex items-start group">
+                                <span className="material-icons-outlined text-primary mr-4 text-xl mt-0.5 group-hover:scale-110 transition-transform">verified</span>
+                                <span className="text-sm md:text-base text-slate-200 leading-relaxed font-light">{cred}</span>
                             </div>
                         ))}
                     </div>

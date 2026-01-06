@@ -223,20 +223,30 @@ const InsightsConnect: React.FC = () => {
             </section>
 
             {/* Learn & Connect */}
-            <section className="py-20 bg-white dark:bg-background-dark transition-colors duration-300">
-                <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-                    <h2 className="font-display text-3xl font-bold text-slate-900 dark:text-white mb-2">Learn & Connect</h2>
-                    <p className="text-slate-500 dark:text-slate-400 mb-8">Follow Shannon's work and insights on your favorite platforms.</p>
+            <section className="relative py-24 overflow-hidden">
+                {/* Background Image */}
+                <div className="absolute inset-0 z-0">
+                    <img
+                        src="https://images.pexels.com/photos/3225517/pexels-photo-3225517.jpeg?auto=compress&cs=tinysrgb&w=2560"
+                        alt="Cinematic lush green forest with soft light"
+                        className="w-full h-full object-cover"
+                    />
+                    <div className="absolute inset-0 bg-slate-950/70"></div>
+                </div>
 
-                    <div className="flex flex-wrap justify-center gap-4 mb-12">
+                <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                    <h2 className="font-display text-4xl md:text-5xl font-bold text-white mb-4 drop-shadow-md">Learn & Connect</h2>
+                    <p className="text-slate-300 text-lg md:text-xl mb-12 font-light">Follow Shannon's work and insights on your favorite platforms.</p>
+
+                    <div className="flex flex-wrap justify-center gap-4 mb-16">
                         {SOCIAL_LINKS.map((link) => (
                             <a
                                 key={link.href}
                                 href={link.href}
-                                className="flex items-center px-4 py-2 bg-slate-50 dark:bg-surface-dark border border-gray-200 dark:border-gray-700 rounded-full hover:bg-slate-100 dark:hover:bg-slate-800 transition"
+                                className="flex items-center px-6 py-3 bg-white/10 backdrop-blur-md border border-white/20 rounded-full hover:bg-white/20 transition-all duration-300 group shadow-lg"
                             >
-                                <SocialIcon platform={link.label} className={`w-4 h-4 mr-2 ${link.colorClass}`} />
-                                <span className="text-sm font-medium text-slate-700 dark:text-slate-300">{link.label}</span>
+                                <SocialIcon platform={link.label} className={`w-5 h-5 mr-3 ${link.colorClass} group-hover:scale-110 transition-transform`} />
+                                <span className="text-sm md:text-base font-medium text-white">{link.label}</span>
                             </a>
                         ))}
                     </div>
@@ -244,33 +254,33 @@ const InsightsConnect: React.FC = () => {
                     <div className="relative max-w-lg mx-auto">
                         <button
                             onClick={() => setIsPodcastsOpen(!isPodcastsOpen)}
-                            className={`w-full flex items-center justify-between px-6 py-4 bg-white dark:bg-surface-dark border ${isPodcastsOpen ? 'border-primary ring-1 ring-primary/20' : 'border-gray-200 dark:border-gray-700'} rounded-lg shadow-sm hover:shadow-md transition-all duration-300`}
+                            className={`w-full flex items-center justify-between px-8 py-5 bg-white/10 backdrop-blur-md border ${isPodcastsOpen ? 'border-primary ring-2 ring-primary/30' : 'border-white/20'} rounded-xl shadow-2xl hover:bg-white/15 transition-all duration-300 group`}
                         >
                             <div className="flex items-center">
-                                <span className={`material-icons-outlined mr-3 ${isPodcastsOpen ? 'text-primary' : 'text-slate-400'}`}>mic</span>
-                                <span className="font-medium text-slate-700 dark:text-slate-200">Featured Podcasts</span>
+                                <span className={`material-icons-outlined mr-4 text-2xl ${isPodcastsOpen ? 'text-primary' : 'text-white/60'}`}>mic</span>
+                                <span className="font-semibold text-lg text-white">Featured Podcasts</span>
                             </div>
-                            <span className={`material-icons-outlined text-slate-400 transition-transform duration-300 ${isPodcastsOpen ? 'rotate-180' : ''}`}>expand_more</span>
+                            <span className={`material-icons-outlined text-white/40 transition-transform duration-300 ${isPodcastsOpen ? 'rotate-180' : ''}`}>expand_more</span>
                         </button>
 
-                        <div className={`mt-2 overflow-hidden transition-all duration-300 ${isPodcastsOpen ? 'max-h-[500px] opacity-100' : 'max-h-0 opacity-0'}`}>
-                            <div className="bg-slate-50 dark:bg-surface-dark/50 border border-gray-100 dark:border-gray-800 rounded-lg p-2 space-y-1">
+                        <div className={`mt-3 overflow-hidden transition-all duration-500 ease-in-out ${isPodcastsOpen ? 'max-h-[600px] opacity-100' : 'max-h-0 opacity-0'}`}>
+                            <div className="bg-slate-900/80 backdrop-blur-xl border border-white/10 rounded-xl p-3 space-y-2 shadow-inner">
                                 {PODCASTS.map((podcast) => (
                                     <a
                                         key={podcast.link}
                                         href={podcast.link}
                                         target="_blank"
                                         rel="noopener noreferrer"
-                                        className="flex items-center p-3 rounded-md hover:bg-white dark:hover:bg-slate-800 transition group"
+                                        className="flex items-center p-4 rounded-lg hover:bg-white/5 transition-all duration-300 group/item"
                                     >
-                                        <div className={`w-8 h-8 flex items-center justify-center rounded-full bg-white dark:bg-slate-900 shadow-sm mr-3 ${podcast.accent}`}>
-                                            <SocialIcon platform={podcast.icon} className="w-4 h-4" />
+                                        <div className={`w-10 h-10 flex items-center justify-center rounded-full bg-white/5 shadow-sm mr-4 ${podcast.accent}`}>
+                                            <SocialIcon platform={podcast.icon} className="w-5 h-5" />
                                         </div>
                                         <div className="flex-1 text-left">
-                                            <p className="text-xs font-semibold text-slate-400 uppercase tracking-tighter">{podcast.platform}</p>
-                                            <p className="text-sm font-medium text-slate-700 dark:text-slate-200 line-clamp-1 group-hover:text-primary transition">{podcast.title}</p>
+                                            <p className="text-[10px] font-bold text-white/40 uppercase tracking-[0.2em] mb-0.5">{podcast.platform}</p>
+                                            <p className="text-sm md:text-base font-medium text-slate-100 line-clamp-1 group-hover/item:text-primary transition-colors">{podcast.title}</p>
                                         </div>
-                                        <span className="material-icons-outlined text-slate-300 group-hover:text-primary transition text-sm">open_in_new</span>
+                                        <span className="material-icons-outlined text-white/20 group-hover/item:text-primary transition-all text-base ml-2">open_in_new</span>
                                     </a>
                                 ))}
                             </div>
