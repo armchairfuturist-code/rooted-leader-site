@@ -62,8 +62,8 @@ const About: React.FC = () => {
                 {/* Background Image */}
                 <div className="absolute inset-0 z-0">
                     <img
-                        src="https://images.pexels.com/photos/775201/pexels-photo-775201.jpeg?auto=compress&cs=tinysrgb&w=2560"
-                        alt="Ethereal misty lake with distant mountains"
+                        src="https://images.pexels.com/photos/417173/pexels-photo-417173.jpeg?auto=compress&cs=tinysrgb&w=2560"
+                        alt="Sharp, majestic mountain peaks reflecting professional excellence"
                         className="w-full h-full object-cover"
                     />
                     <div className="absolute inset-0 bg-slate-950/75"></div>

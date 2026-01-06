@@ -6,8 +6,8 @@ const Hero: React.FC = () => {
             {/* Background Image */}
             <div className="absolute inset-0 z-0">
                 <img
-                    src="https://images.pexels.com/photos/917494/pexels-photo-917494.jpeg?auto=compress&cs=tinysrgb&w=2560"
-                    alt="Serene misty forest with soft green tones and clinical-organic feel"
+                    src="https://images.pexels.com/photos/414171/pexels-photo-414171.jpeg?auto=compress&cs=tinysrgb&w=2560"
+                    alt="Serene mountain lake landscape with clear reflections and deep perspective"
                     className="w-full h-full object-cover"
                 />
                 {/* Overlay - Darker gradient for readability without blur */}
@@ -59,8 +59,8 @@ const Hero: React.FC = () => {
             </div>
 
             {/* Scroll Indicator */}
-            <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce opacity-70">
-                <span className="material-icons-outlined text-white text-4xl">keyboard_arrow_down</span>
+            <div className="absolute bottom-10 left-1/2 -translate-x-1/2 z-20 animate-bounce opacity-80 cursor-pointer">
+                <span className="material-icons-outlined text-white text-3xl md:text-4xl">expand_more</span>
             </div>
         </header>
     );
