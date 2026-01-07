@@ -214,7 +214,7 @@ const PricingTierCard: React.FC<{ pkg: any, isSelected: boolean, onSelect: () =>
                     {pkg.sessions} {typeof pkg.sessions === 'number' || !pkg.sessions.toString().toLowerCase().includes('week') ? 'Sessions' : ''}
                 </span>
                 <span className={`text-[10px] uppercase tracking-wider font-bold px-2 py-0.5 rounded-full 
-                    ${isSelected
+                    ${isSelected && !isMuted
                         ? 'bg-emerald-100 text-emerald-700'
                         : 'bg-slate-100 dark:bg-slate-800 text-slate-400'
                     }`}>
@@ -236,7 +236,7 @@ const PricingTierCard: React.FC<{ pkg: any, isSelected: boolean, onSelect: () =>
                     {typeof pkg.perSession === 'number' ? `$${pkg.perSession}/session` : pkg.perSession}
                 </span>
                 {pkg.save && (
-                    <span className={`${isSelected ? 'bg-emerald-100' : 'bg-emerald-100/50 dark:bg-emerald-900/20'} text-emerald-700 dark:text-emerald-400 text-[11px] font-medium px-2.5 py-1 rounded-full`}>
+                    <span className={`${isSelected && !isMuted ? 'bg-emerald-100' : 'bg-emerald-100/50 dark:bg-emerald-900/20'} ${isMuted ? 'text-slate-400 dark:text-slate-500' : 'text-emerald-700 dark:text-emerald-400'} text-[11px] font-medium px-2.5 py-1 rounded-full`}>
                         {pkg.save.startsWith('$') ? `Save ${pkg.save}` : pkg.save}
                     </span>
                 )}
@@ -270,7 +270,7 @@ const ServiceCard: React.FC<{ service: any }> = ({ service }) => {
             price: finalPrice,
             originalPrice,
             discount: `${actualPercent}%`,
-            save: `$${actualSavings.toLocaleString()} • ${actualPercent}%`,
+            save: `$${actualSavings.toLocaleString()}`,
             perSession: Math.round(perSession),
             label: `${sessions}-Session Package`,
             bestValue: sessions === 24
