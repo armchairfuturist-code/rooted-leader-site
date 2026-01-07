@@ -412,7 +412,7 @@ const ServiceCard: React.FC<{ service: any }> = ({ service }) => {
             </button>
 
             {/* Expanded Content */}
-            <div className={`overflow-hidden transition-all duration-500 ease-in-out ${isExpanded ? 'max-h-[1000px] opacity-100' : 'max-h-0 opacity-0'}`}>
+            <div className={`overflow-hidden transition-all duration-500 ease-in-out ${isExpanded ? 'max-h-[2500px] opacity-100' : 'max-h-0 opacity-0'}`}>
                 <div className="p-8 pt-4 bg-gray-50 dark:bg-slate-800/40 border-t border-gray-200 dark:border-gray-800/50">
 
                     {/* Rich Text Content */}
