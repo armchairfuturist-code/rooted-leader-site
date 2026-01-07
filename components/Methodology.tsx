@@ -58,7 +58,7 @@ const Methodology: React.FC = () => {
                                     The Integrative Coaching Program
                                 </h2>
                                 <p className="text-slate-600 dark:text-slate-400 mb-8">
-                                    You’ve done the talk therapy. You understand the theory. Now, let’s do the deep somatic work required to actually shift your baseline. A clinical, action-oriented approach to reclaiming your nervous system's innate capacity for healing while integrating mind, body, spirit, and energy.
+                                    You’ve done the talk therapy. You understand the theory. Now, let’s do the deep somatic work required to actually shift your baseline. A Neuroscience-based, action-oriented approach to reclaiming your nervous system's capacity for healing while integrating mind, body, spirit, and energy.
                                 </p>
 
                                 <div className="space-y-6">

@@ -52,7 +52,7 @@ const Hero: React.FC = () => {
                             href="#services"
                             className="group bg-white/10 hover:bg-white/20 backdrop-blur-md text-white border border-white/30 text-lg px-10 py-4 rounded-md font-semibold transition-all duration-300 shadow-lg hover:shadow-xl hover:-translate-y-1 flex items-center justify-center"
                         >
-                            View Integration Paths
+                            Your Integrative Paths
                         </a>
                     </div>
                 </div>

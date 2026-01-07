@@ -17,7 +17,7 @@ const servicesPaths = [
       <p class="mb-4">I serve as your systemic mirror. I listen to the unspoken undercurrents of your narrative—biological, energetic, and structural—to locate the 'Systemic Knot'.</p>
       <h4 class="text-sm font-bold uppercase tracking-widest text-slate-900 dark:text-white mb-2 mt-4">The Outcome</h4>
       <p class="mb-4">You leave with insight into the root of stuckness (Trauma vs Strategy), one actionable tool to claim a small win, and a clear compass for your next steps.</p>
-      <p class="text-sm text-gray-500 italic mt-4">Scope: This is a single consulting session, not an intake for clinical services.</p>
+      <p class="text-sm text-gray-500 italic mt-4">Scope: This is a single consulting session, not an intake for services.</p>
     `,
         packages: [], // Single option only
         ctaLink: "https://docs.google.com/forms/d/e/1FAIpQLSdMdvumB1DSyqxR0BfeBqPkB1a1Zuo_mBkX81yzs2AQZEhKBA/viewform"
