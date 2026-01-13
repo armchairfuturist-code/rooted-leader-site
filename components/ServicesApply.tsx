@@ -29,8 +29,8 @@ const servicesPaths = [
         title: "Somatics & Trauma Integration",
         subtitle: "Restoring Safety & Navigating the Unseen",
         intent: "We are not just talking about your history; we are metabolizing it. This path applies neuroscientific somatic tools to two distinct goals: 1) Resolving Chronic Stress, Trauma, & Complex Trauma to restore biological safety, and 2) Integrating Psychedelic & Mystical Experiences to ground profound insights into daily life. Whether you need to repair your nervous system or embody an expanded state of consciousness, we work at the root physiology to build lasting capacity.",
-        defaultPrice: 1800,
-        perSessionRate: 300,
+        defaultPrice: 1500,
+        perSessionRate: 250,
         deepContent: `
       <h4 class="text-sm font-bold uppercase tracking-widest text-slate-900 dark:text-white mb-2 mt-4">The Methodology</h4>
       <p class="mb-4">I use a bespoke blend of Somatic Experiencing (SE™) to discharge survival energy, Internal Family Systems (IFS) to unburden protective parts, and Polyvagal Mapping to navigate your biology.</p>
@@ -85,8 +85,8 @@ const servicesPaths = [
         title: "Energetic Recalibration",
         subtitle: "Subtle Body Energy Balancing",
         intent: "Deep, restorative work for the subtle body. Going beyond relaxation into the architecture of your energy field.",
-        defaultPrice: 1800,
-        perSessionRate: 300,
+        defaultPrice: 1500,
+        perSessionRate: 250,
         deepContent: `
       <h4 class="text-sm font-bold uppercase tracking-widest text-slate-900 dark:text-white mb-2 mt-4">The Modalities</h4>
       <p class="mb-4"><strong>Usui Holy Fire® III Reiki:</strong> High-frequency energy for purification and emotional healing.</p>
@@ -279,8 +279,9 @@ const ServiceCard: React.FC<{ service: any }> = ({ service }) => {
 
     let packages = service.packages || [];
     if (service.perSessionRate && service.id !== "path-3" && service.id !== "path-6") {
+        const isPath2or4 = service.id === "path-2" || service.id === "path-4";
         packages = [
-            calculateTier(service.perSessionRate, 6, 5),
+            calculateTier(service.perSessionRate, 6, isPath2or4 ? 0 : 5),
             calculateTier(service.perSessionRate, 12, 10),
             calculateTier(service.perSessionRate, 24, 15),
         ];
@@ -339,7 +340,7 @@ const ServiceCard: React.FC<{ service: any }> = ({ service }) => {
                             <span className="text-[10px] font-bold text-slate-400 uppercase tracking-widest">
                                 Package Selections
                             </span>
-                            {service.perSessionRate && (
+                            {service.perSessionRate && service.id !== "path-2" && service.id !== "path-4" && (
                                 <span className="text-[10px] text-slate-400 font-medium">
                                     Standard Rate: ${service.perSessionRate}/session
                                 </span>
