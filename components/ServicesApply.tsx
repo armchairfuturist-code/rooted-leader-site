@@ -25,27 +25,42 @@ const servicesPaths = [
     {
         id: "path-2",
         pathLabel: "PATH 2",
-        category: "DEEP HEALING & INTEGRATION",
-        title: "Somatics & Trauma Integration",
-        subtitle: "Restoring Safety & Navigating the Unseen",
-        intent: "We are not just talking about your history; we are metabolizing it. This path applies neuroscientific somatic tools to two distinct goals: 1) Resolving Chronic Stress, Trauma, & Complex Trauma to restore biological safety, and 2) Integrating Psychedelic & Mystical Experiences to ground profound insights into daily life. Whether you need to repair your nervous system or embody an expanded state of consciousness, we work at the root physiology to build lasting capacity.",
+        category: "INTEGRATIVE SOMATICS",
+        title: "Trauma & Chronic Stress Resolution",
+        subtitle: "Restoring Biological Safety & Capacity",
+        intent: "We are not just talking about your history; we are metabolizing it. Trauma and chronic stress live in the nervous system, not the cognitive brain. This path applies neuroscientific somatic tools to resolve Chronic Stress, Complex Trauma, and Developmental Wounds. We focus on metabolizing the physiology of the threat response so you can return to the present moment with restored capacity.",
         defaultPrice: 1500,
         perSessionRate: 250,
         deepContent: `
-      <h4 class="text-sm font-bold uppercase tracking-widest text-slate-900 dark:text-white mb-2 mt-4">The Methodology</h4>
-      <p class="mb-4">I use a bespoke blend of Somatic Experiencing (SE™) to discharge survival energy, Internal Family Systems (IFS) to unburden protective parts, and Polyvagal Mapping to navigate your biology.</p>
+      <h4 class="text-sm font-bold uppercase tracking-widest text-slate-900 dark:text-white mb-2 mt-4">The Somatic Engine</h4>
+      <p class="mb-4">We use a bespoke blend of Somatic Experiencing (SE™) to discharge trapped survival energy, Internal Family Systems (IFS) to unburden protective parts, and Polyvagal Mapping to navigate your biology.</p>
       
       <h4 class="text-sm font-bold uppercase tracking-widest text-slate-900 dark:text-white mb-2 mt-4">Integrative Coaching</h4>
-      <p class="mb-4">Transformation requires a life designed to hold your new capacity. I leverage my polymath background to provide education, skill-building, and strategies. We adjust your environment and daily rhythms to support your nervous system, ensuring the healing sticks in the real world.</p>
+      <p class="mb-4">Transformation requires a life designed to hold your new capacity. I leverage my polymath background to provide education, skill-building, and strategies. We adjust your environment and daily rhythms to support your nervous system, ensuring the regulation sticks in the real world.</p>
 
-      <h4 class="text-sm font-bold uppercase tracking-widest text-slate-900 dark:text-white mb-2 mt-4">Track A: Trauma & Stress Resolution</h4>
-      <p class="mb-4">We target the physiological roots of Complex Trauma, Shock Trauma, and Chronic Stress. By metabolizing the "4 Fs"—discharging Fight (irritation/rage) and Flight (anxiety), or thawing Freeze (numbness) and Fawn (people-pleasing)—we return the system to the present moment.</p>
-
-      <h4 class="text-sm font-bold uppercase tracking-widest text-slate-900 dark:text-white mb-2 mt-4">Track B: Psychedelic & Mystical Integration</h4>
-      <p class="mb-4">We use somatic titration to ground "Peak Experiences" into daily behavior. This includes resolving difficult trips, closing open energetic loops, and navigating Spiritual Emergence ("Dark Nights") without bypassing the body.</p>
+      <h4 class="text-sm font-bold uppercase tracking-widest text-slate-900 dark:text-white mb-2 mt-4">Metabolizing the "4 Fs"</h4>
+      <p class="mb-2">We interrupt chronic survival loops:</p>
+      <ul class="space-y-2 mb-4">
+        <li class="flex items-start gap-3 text-sm text-slate-600 dark:text-slate-400">
+          <span class="font-bold text-slate-900 dark:text-white min-w-[70px]">Fight:</span>
+          <span>Discharging irritation, rage, and the need for control.</span>
+        </li>
+        <li class="flex items-start gap-3 text-sm text-slate-600 dark:text-slate-400">
+          <span class="font-bold text-slate-900 dark:text-white min-w-[70px]">Flight:</span>
+          <span>Settling anxiety, panic, and rushing.</span>
+        </li>
+        <li class="flex items-start gap-3 text-sm text-slate-600 dark:text-slate-400">
+          <span class="font-bold text-slate-900 dark:text-white min-w-[70px]">Freeze:</span>
+          <span>Safely "thawing" numbness, depression, and dissociation.</span>
+        </li>
+        <li class="flex items-start gap-3 text-sm text-slate-600 dark:text-slate-400">
+          <span class="font-bold text-slate-900 dark:text-white min-w-[70px]">Fawn:</span>
+          <span>Building boundaries to resolve people-pleasing and over-caretaking.</span>
+        </li>
+      </ul>
 
       <h4 class="text-sm font-bold uppercase tracking-widest text-slate-900 dark:text-white mb-2 mt-4">Scope of Practice</h4>
-      <p class="mb-4">Complex Trauma, Developmental Wounds, Shock Trauma, Trauma Responses, Chronic Stress, Psychedelic Integration, Spiritual Emergence (‘Dark Nights’), and Ancestral/Karmic Clearing.</p>
+      <p class="mb-4">Trauma Resolution, Complex Trauma (C-PTSD), Developmental Wounds, Shock Trauma, Medical Trauma, and Chronic Stress / Burnout recovery.</p>
     `,
         packages: [], // Defined by standard rate logic in component
         ctaLink: "https://docs.google.com/forms/d/e/1FAIpQLSdMdvumB1DSyqxR0BfeBqPkB1a1Zuo_mBkX81yzs2AQZEhKBA/viewform"
@@ -53,29 +68,30 @@ const servicesPaths = [
     {
         id: "path-3",
         pathLabel: "PATH 3",
-        category: "NEURO-REGULATION",
-        title: "Safe & Sound Neuro-Regulation",
-        subtitle: "Acoustic Safety & Physiological Reset",
-        intent: "This is a physiological \"hardware update\" for your nervous system. We use the Safe & Sound Protocol (SSP) to reduce auditory hypersensitivity and retune your biology for connection. This path is ideal for those navigating Neurodivergence, Sensory Processing sensitivities, or Chronic Dysregulation. We weave the listening protocol with somatic safety and practical lifestyle strategy to ensure the changes stick.",
-        defaultPrice: 3000,
-        perSessionRate: null,
+        category: "INTEGRATION",
+        title: "Consciousness Integration & Expanded States",
+        subtitle: "Navigating the Unseen & Grounding the Self",
+        intent: "Engaging with expanded states of consciousness—whether through psychedelics, deep meditation, or spontaneous spiritual awakening—can be destabilizing if not properly grounded. This path bridges the gap between \"The Experience\" and \"Daily Life.\" We use Somatic Experiencing (SE™) to stabilize the nervous system (grounding the voltage) and Integrative Coaching to anchor the insights into your physical reality.",
+        defaultPrice: 1500,
+        perSessionRate: 250,
         deepContent: `
       <h4 class="text-sm font-bold uppercase tracking-widest text-slate-900 dark:text-white mb-2 mt-4">The Methodology</h4>
-      <p class="mb-4">The SSP uses prosodic vocal frequencies to signal safety to the reptilian brain. This allows the system to shift out of chronic protectiveness and exercises the middle ear muscles to filter out "danger" frequencies.</p>
+      <p class="mb-4">This is a hybrid of Somatic Regulation and Life Coaching. We use somatic tools to ensure your nervous system can hold the frequency of your insights, and coaching tools to integrate those insights into your career, relationships, and self-concept.</p>
       
-      <h4 class="text-sm font-bold uppercase tracking-widest text-slate-900 dark:text-white mb-2 mt-4">Somatic Safety (SE™)</h4>
-      <p class="mb-4">As the auditory system opens, the body may release stored tension. We use Somatic Experiencing and Parts Work to metabolize these shifts safely, ensuring the "opening" feels manageable, not flooding.</p>
+      <h4 class="text-sm font-bold uppercase tracking-widest text-slate-900 dark:text-white mb-2 mt-4">Resolving the Difficult</h4>
+      <p class="mb-4">Not all journeys are blissful. If you have had a "difficult trip" or an overwhelming opening, we use Somatic Experiencing to close open energetic loops, repair boundaries, and re-establish safety in the body.</p>
 
-      <h4 class="text-sm font-bold uppercase tracking-widest text-slate-900 dark:text-white mb-2 mt-4">Integrative Coaching</h4>
-      <p class="mb-4">A retuned nervous system requires a new lifestyle. We use a blend of holistic health coaching and strategies to redesign your daily rhythm, ensuring your environment supports your new capacity for calm.</p>
+      <h4 class="text-sm font-bold uppercase tracking-widest text-slate-900 dark:text-white mb-2 mt-4">Spiritual Emergence</h4>
+      <p class="mb-4">Support for those navigating "Dark Nights of the Soul," Near-Death Experiences (NDEs), or Kundalini awakenings. We normalize the process and provide the architecture to hold the expansion.</p>
 
-      <h4 class="text-sm font-bold uppercase tracking-widest text-slate-900 dark:text-white mb-2 mt-4">Prerequisite & Safety</h4>
-      <p class="mb-4">Sound is a potent intervention. Physiological readiness will be assessed during initial session. If the body is not yet ready for auditory stimulation, we will begin with *Path 2: Somatics & Trauma Integration* to establish somatic stability before introducing the SSP.</p>
+      <h4 class="text-sm font-bold uppercase tracking-widest text-slate-900 dark:text-white mb-2 mt-4">Scope of Practice</h4>
+      <p class="mb-4">Psychedelic Integration (Preparation & Processing), Spiritual Emergence, Ancestral & Karmic Pattern Clearing, and processing Ontological Shock (shifts in worldview).</p>
+
+      <p class="text-xs italic text-slate-500 mt-6 border-t border-slate-100 dark:border-slate-800 pt-4">
+        <strong>Disclaimer:</strong> Services provided are Life Coaching, Somatic Education, and Spiritual Mentoring. I do not provide, condone, or sit for the use of illegal substances.
+      </p>
     `,
-        packages: [
-            { sessions: "12", price: 3000, label: "Private 1:1 Track", save: "$300 (License Included)", perSession: 250, note: "+ 1-Year License ($300 Value). Includes dedicated co-regulation and skill-building." },
-            { sessions: "12-Week", price: 1000, label: "Group Track", save: "Education & Access", perSession: "Cohort", note: "Group Track (\"Vagus Nerve Reset\"): Includes 12-Week Cohort + 1-Year License." }
-        ],
+        packages: [], // Defined by standard rate logic in component
         ctaLink: "https://docs.google.com/forms/d/e/1FAIpQLSdMdvumB1DSyqxR0BfeBqPkB1a1Zuo_mBkX81yzs2AQZEhKBA/viewform"
     },
     {
@@ -83,15 +99,16 @@ const servicesPaths = [
         pathLabel: "PATH 4",
         category: "ENERGY MEDICINE",
         title: "Energetic Recalibration",
-        subtitle: "Subtle Body Energy Balancing",
-        intent: "Deep, restorative work for the subtle body. Going beyond relaxation into the architecture of your energy field.",
+        subtitle: "Subtle Body Architecture & Intuitive Alignment",
+        intent: "This is deep, restorative work for the subtle body. We go beyond relaxation into the architecture of your energy field. Using my background as a Reiki Master and 5/1 Reflector, I act as a mirror to identify and clear energetic distortion. This path combines high-frequency energy work with Integrative Coaching to teach you how to maintain your own energetic hygiene.",
         defaultPrice: 1500,
         perSessionRate: 250,
         deepContent: `
       <h4 class="text-sm font-bold uppercase tracking-widest text-slate-900 dark:text-white mb-2 mt-4">The Modalities</h4>
-      <p class="mb-4"><strong>Usui Holy Fire® III Reiki:</strong> High-frequency energy for purification and emotional healing.</p>
-      <p class="mb-4"><strong>Karuna Ki Reiki:</strong> The 'Way of Compassionate Action' for shadow work and deep spiritual trauma.</p>
-      <p class="mb-4"><strong>Shamanic Healing:</strong> Earth-based practices and Soul Retrieval to restore your connection to nature.</p>
+      <p class="mb-4"><strong>Usui Holy Fire® III Reiki:</strong> A high-frequency energy that focuses on purification, empowerment, and clearing the Physical and Emotional bodies. It helps burn away dense stress and emotional armoring.</p>
+      <p class="mb-4"><strong>Karuna Ki Reiki:</strong> Known as the "Way of Compassionate Action," this frequency targets the Transpersonal and Spiritual bodies. It is specifically potent for shadow work and soothing deep spiritual wounds.</p>
+      <p class="mb-4"><strong>Seer & Mediumship Capacities:</strong> Leveraging my Reflector design, we access the unseen. This includes connecting with your "Spirit Team" (guides/ancestors), retrieving fragmented aspects of the self (Soul Retrieval), and clearing ancestral burdens from your lineage.</p>
+      <p class="mb-4"><strong>Integrative Coaching & Training:</strong> I do not just clear your energy; I teach you how to hold it. We focus on grounding, shielding, and clearing techniques. <br/><br/><em>Note: For those called to the path, this container can also include training and Attunements to become a Reiki Practitioner.</em></p>
     `,
         packages: [], // Defined by standard rate logic in component
         ctaLink: "https://docs.google.com/forms/d/e/1FAIpQLSdMdvumB1DSyqxR0BfeBqPkB1a1Zuo_mBkX81yzs2AQZEhKBA/viewform"
@@ -164,19 +181,64 @@ const servicesPaths = [
         pathLabel: "PATH 6",
         category: "CORPORATE & ADVISORY",
         title: "Strategic Advisory & Consulting",
-        subtitle: "Trauma-Trained Systems Expert",
-        intent: "High-Level Advisory for Visionaries. I act as a 'Systemic Auditor,' viewing the complexity of your project through a trauma-informed lens.",
+        subtitle: "Trauma-Informed Architecture for Visionaries & Organizations",
+        intent: "Business bottlenecks are often biological problems in disguise. This path offers High-Level Advisory for Visionaries, Entrepreneurs, and Systems Change Agents. I act as a \"Systemic Auditor,\" viewing the complexity of your project through a polymathic lens—integrating 25+ years of executive strategy with deep expertise in human physiology and trauma. We build systems that are not just efficient, but sustainable.",
         defaultPrice: "Custom",
         perSessionRate: "Varies",
         deepContent: `
-      <h4 class="text-sm font-bold uppercase tracking-widest text-slate-900 dark:text-white mb-2 mt-4">Services</h4>
-      <p class="mb-4">Systems Change Consulting, Workplace Trauma Audits, and Keynote Speaking.</p>
-      <h4 class="text-sm font-bold uppercase tracking-widest text-slate-900 dark:text-white mb-2 mt-4">Engagement Options</h4>
-      <p class="mb-4"><strong>Ad-Hoc:</strong> $500/hr for immediate problem solving.</p>
-      <p class="mb-4"><strong>Retainer:</strong> $4,500 for 10 hours ('Second Brain' on speed dial).</p>
-      <p class="mb-4"><strong>Intensives:</strong> Half-Day ($1,800) or Full-Day ($3,000).</p>
+      <h4 class="text-sm font-bold uppercase tracking-widest text-slate-900 dark:text-white mb-2 mt-4">The Systemic Audit</h4>
+      <p class="mb-4">I look for the "Check Engine Light" in your business or project. Whether it is a stalled launch, a burning-out team, or a safety gap in your product, I identify the root systemic fracture and provide the roadmap to fix it.</p>
+      
+      <h4 class="text-sm font-bold uppercase tracking-widest text-slate-900 dark:text-white mb-2 mt-4">The "Human Element" Strategy</h4>
+      <p class="mb-4">Leveraging my background in Human Psychology and Rehabilitation, I advise on Organizational Design and Neuro-Inclusive Workflows. We structure your business environment to support the diverse nervous systems of your team and yourself, preventing burnout before it starts. <br/><em class="text-xs">Note: This is strategic consulting, not clinical case management.</em></p>
+
+      <h4 class="text-sm font-bold uppercase tracking-widest text-slate-900 dark:text-white mb-2 mt-4">Harm Reduction & Safety</h4>
+      <p class="mb-4">For organizations in the Transformational or Wellness space, I design Safety Architectures. I help you build protocols that protect your community and your liability, ensuring your container is as safe as it is expansive.</p>
+
+      <h4 class="text-sm font-bold uppercase tracking-widest text-slate-900 dark:text-white mb-2 mt-4">Integrative Coaching</h4>
+      <p class="mb-4">I do not just consult on the business; I mentor the leader. We ensure your leadership style is congruent with your values and your biological capacity.</p>
+
+      <h4 class="text-sm font-bold uppercase tracking-widest text-slate-900 dark:text-white mb-2 mt-4">Scope of Practice</h4>
+      <p class="mb-4">Systems Change Consulting, Business Advisory, Workplace Stress & Resilience Audits, Harm Reduction Strategy, Integrative Program Design, and Executive/Leadership Coaching.</p>
     `,
-        packages: [], // Custom logic handled in UI
+        packages: [
+            {
+                sessions: "Initial Strategy",
+                price: 300,
+                label: "Prerequisite Session",
+                perSession: "Scope & Fit",
+                note: "(Book via Path 1) The prerequisite deep-dive to scope the project and assess fit.",
+                save: null
+            },
+            {
+                sessions: "10 Hour Retainer",
+                price: 4500,
+                label: "The Advisory Retainer",
+                perSession: "Strategic Partner",
+                note: "The \"Second Brain\": Systemic Expert on speed dial. Strategy calls & priority booking.",
+                save: null
+            },
+            {
+                sessions: "Strategic Intensive",
+                price: 1800, // Default to Half-Day
+                label: "Deep-Dive Intensive",
+                perSession: "High-Impact",
+                note: "Select duration above. Best for mapping, auditing, or team training.",
+                save: null,
+                variants: [
+                    { name: "Half-Day", price: 1800, duration: "4 Hours" },
+                    { name: "Full-Day", price: 3000, duration: "7 Hours" }
+                ]
+            },
+            {
+                sessions: "The Project Line",
+                price: "Custom",
+                label: "Consulting & Management",
+                perSession: "Proposal Based",
+                note: "Engagements (3-18 months) for implementation of trauma-informed systems.",
+                save: null
+            }
+        ],
         ctaLink: "mailto:Shannon@theintegrativecounselor.com"
     }
 ];
@@ -188,14 +250,34 @@ const alumniPath = {
 };
 
 // Pricing tier card component for prominent display
-const PricingTierCard: React.FC<{ pkg: any, isSelected: boolean, onSelect: () => void, perSessionRate: number | null, isMuted?: boolean }> = ({ pkg, isSelected, onSelect, perSessionRate, isMuted }) => {
+const PricingTierCard: React.FC<{
+    pkg: any,
+    isSelected: boolean,
+    onSelect: () => void,
+    perSessionRate: number | null,
+    isMuted?: boolean,
+    variantIdx: number,
+    setVariantIdx: (idx: number) => void
+}> = ({ pkg, isSelected, onSelect, perSessionRate, isMuted, variantIdx, setVariantIdx }) => {
     const isBestValue = pkg.bestValue;
+    const hasVariants = pkg.variants && pkg.variants.length > 0;
+
+    // Determine active price/duration based on variant if present
+    const activePrice = hasVariants ? pkg.variants[variantIdx].price : pkg.price;
+    const activeDuration = hasVariants ? pkg.variants[variantIdx].duration : pkg.duration;
+
+    // Logic to hide "Sessions" label for specific types
+    const sessionLabel = typeof pkg.sessions === 'string' &&
+        (pkg.sessions.toLowerCase().includes('retainer') ||
+            pkg.sessions.toLowerCase().includes('strategy') ||
+            pkg.sessions.toLowerCase().includes('intensive'))
+        ? ''
+        : (typeof pkg.sessions === 'number' || !pkg.sessions.toString().toLowerCase().includes('week') ? 'Sessions' : '');
 
     return (
-        <button
+        <div
             onClick={isMuted ? undefined : onSelect}
-            disabled={isMuted}
-            className={`relative flex flex-col p-5 rounded-2xl border transition-all duration-500 text-left w-full
+            className={`relative flex flex-col p-5 rounded-2xl border transition-all duration-500 text-left w-full cursor-pointer
                 ${isMuted
                     ? 'border-slate-200 dark:border-slate-800 bg-slate-50/50 dark:bg-slate-900/30 cursor-default opacity-80'
                     : isSelected
@@ -211,22 +293,45 @@ const PricingTierCard: React.FC<{ pkg: any, isSelected: boolean, onSelect: () =>
 
             <div className="flex items-center justify-between mb-2">
                 <span className="text-lg font-semibold text-slate-800 dark:text-slate-100">
-                    {pkg.sessions} {typeof pkg.sessions === 'number' || !pkg.sessions.toString().toLowerCase().includes('week') ? 'Sessions' : ''}
+                    {pkg.sessions} {sessionLabel}
                 </span>
-                <span className={`text-[10px] uppercase tracking-wider font-bold px-2 py-0.5 rounded-full 
-                    ${isSelected && !isMuted
-                        ? 'bg-emerald-100 text-emerald-700'
-                        : 'bg-slate-100 dark:bg-slate-800 text-slate-400'
-                    }`}>
-                    50 min
-                </span>
+
+                {/* Duration Badge or Variant Toggle */}
+                {!hasVariants ? (
+                    <span className={`text-[10px] uppercase tracking-wider font-bold px-2 py-0.5 rounded-full 
+                        ${isSelected && !isMuted
+                            ? 'bg-emerald-100 text-emerald-700'
+                            : 'bg-slate-100 dark:bg-slate-800 text-slate-400'
+                        }`}>
+                        {activeDuration || '50 min'}
+                    </span>
+                ) : (
+                    <div className="flex bg-slate-200 dark:bg-slate-800 rounded-full p-0.5">
+                        {pkg.variants.map((v: any, idx: number) => (
+                            <button
+                                key={idx}
+                                onClick={(e) => {
+                                    e.stopPropagation();
+                                    setVariantIdx(idx);
+                                    onSelect(); // Ensure card selects when toggle is clicked
+                                }}
+                                className={`text-[9px] uppercase font-bold px-2 py-0.5 rounded-full transition-colors ${variantIdx === idx
+                                    ? 'bg-white dark:bg-slate-600 text-slate-900 dark:text-white shadow-sm'
+                                    : 'text-slate-500 hover:text-slate-700 dark:hover:text-slate-300'
+                                    }`}
+                            >
+                                {v.name}
+                            </button>
+                        ))}
+                    </div>
+                )}
             </div>
 
             <div className="flex items-baseline gap-2 mb-2">
                 <span className="text-3xl font-bold text-slate-900 dark:text-white">
-                    ${pkg.price.toLocaleString()}
+                    {typeof activePrice === 'number' ? `$${activePrice.toLocaleString()}` : activePrice}
                 </span>
-                {pkg.originalPrice && !isMuted && (
+                {pkg.originalPrice && !isMuted && !hasVariants && (
                     <span className="text-sm text-slate-400 line-through">${pkg.originalPrice.toLocaleString()}</span>
                 )}
             </div>
@@ -247,12 +352,16 @@ const PricingTierCard: React.FC<{ pkg: any, isSelected: boolean, onSelect: () =>
                     {pkg.note}
                 </div>
             )}
-        </button>
+        </div>
     );
 };
 
 const ServiceCard: React.FC<{ service: any }> = ({ service }) => {
     const [isExpanded, setIsExpanded] = useState(false);
+    const [variantIdx, setVariantIdx] = useState(0); // State for variants (e.g. Intensives)
+
+    // Reset variant index when selected package changes (optional, but good for UI consistency)
+    // For now we keep it simple since only one package has variants.
 
     // Dynamic package calculation based on standard rate logic
     const calculateTier = (baseRate: number, sessions: number, discountPercent: number) => {
@@ -278,10 +387,10 @@ const ServiceCard: React.FC<{ service: any }> = ({ service }) => {
     };
 
     let packages = service.packages || [];
-    if (service.perSessionRate && service.id !== "path-3" && service.id !== "path-6") {
-        const isPath2or4 = service.id === "path-2" || service.id === "path-4";
+    if (service.perSessionRate && service.id !== "path-6") {
+        const isPath2or3or4 = service.id === "path-2" || service.id === "path-3" || service.id === "path-4";
         packages = [
-            calculateTier(service.perSessionRate, 6, isPath2or4 ? 0 : 5),
+            calculateTier(service.perSessionRate, 6, isPath2or3or4 ? 0 : 5),
             calculateTier(service.perSessionRate, 12, 10),
             calculateTier(service.perSessionRate, 24, 15),
         ];
@@ -297,8 +406,11 @@ const ServiceCard: React.FC<{ service: any }> = ({ service }) => {
     const hasPackages = packages.length > 0;
     const currentPkg = hasPackages ? packages[selectedPackageIdx] : null;
 
+    // Handle price display with variant support
+    const activePkgPrice = currentPkg?.variants ? currentPkg.variants[variantIdx].price : currentPkg?.price;
+
     const displayPrice = currentPkg
-        ? (typeof currentPkg.price === 'number' ? `$${currentPkg.price.toLocaleString()}` : currentPkg.price)
+        ? (typeof activePkgPrice === 'number' ? `$${activePkgPrice.toLocaleString()}` : activePkgPrice)
         : (typeof service.defaultPrice === 'number' ? `$${service.defaultPrice.toLocaleString()}` : service.defaultPrice);
 
     const displayLabel = currentPkg ? currentPkg.label : service.priceLabel;
@@ -340,7 +452,7 @@ const ServiceCard: React.FC<{ service: any }> = ({ service }) => {
                             <span className="text-[10px] font-bold text-slate-400 uppercase tracking-widest">
                                 Package Selections
                             </span>
-                            {service.perSessionRate && service.id !== "path-2" && service.id !== "path-4" && (
+                            {service.perSessionRate && service.id !== "path-2" && service.id !== "path-3" && service.id !== "path-4" && (
                                 <span className="text-[10px] text-slate-400 font-medium">
                                     Standard Rate: ${service.perSessionRate}/session
                                 </span>
@@ -354,7 +466,8 @@ const ServiceCard: React.FC<{ service: any }> = ({ service }) => {
                                     isSelected={selectedPackageIdx === idx}
                                     onSelect={() => setSelectedPackageIdx(idx)}
                                     perSessionRate={service.perSessionRate}
-                                    isMuted={service.id === "path-3"}
+                                    variantIdx={variantIdx}
+                                    setVariantIdx={setVariantIdx}
                                 />
                             ))}
                         </div>
@@ -373,33 +486,18 @@ const ServiceCard: React.FC<{ service: any }> = ({ service }) => {
                     </div>
                 )}
 
-                {/* Custom Pricing (Path 6) */}
-                {isPath6 && (
-                    <div className="mb-6 p-4 bg-gradient-to-br from-slate-50 to-slate-100 dark:from-slate-800 dark:to-slate-900 rounded-xl border border-slate-200 dark:border-slate-700">
-                        <div className="text-2xl font-bold text-slate-900 dark:text-white mb-2">
-                            Custom Engagement
-                        </div>
-                        <p className="text-sm text-slate-600 dark:text-slate-400">
-                            Tailored to your organization's unique needs
-                        </p>
-                    </div>
-                )}
 
                 {/* Divider to push CTA down */}
                 <div className="mt-auto border-t border-gray-100 dark:border-gray-800 mb-6"></div>
 
                 {/* Primary CTA */}
                 <a
-                    href={service.id === "path-3" ? "#" : service.ctaLink}
+                    href={service.ctaLink}
                     target={isPath6 ? "_self" : "_blank"}
                     rel="noopener noreferrer"
-                    onClick={(e) => service.id === "path-3" && e.preventDefault()}
-                    className={`block w-full py-3 px-4 font-semibold text-center rounded transition-colors duration-200 ${service.id === "path-3"
-                        ? "bg-slate-900 dark:bg-white text-white dark:text-slate-900 cursor-default opacity-90"
-                        : "bg-slate-900 dark:bg-white text-white dark:text-slate-900 hover:bg-slate-800 dark:hover:bg-gray-100"
-                        }`}
+                    className="block w-full py-3 px-4 font-semibold text-center rounded transition-colors duration-200 bg-slate-900 dark:bg-white text-white dark:text-slate-900 hover:bg-slate-800 dark:hover:bg-gray-100"
                 >
-                    {isPath6 ? "Discuss Your Vision" : service.id === "path-3" ? "Coming Q1 2026" : "Join Priority Waitlist"}
+                    {isPath6 ? "Discuss Your Vision" : "Join Priority Waitlist"}
                 </a>
             </div>
 
