@@ -331,7 +331,7 @@ const PricingTierCard: React.FC<{
                 <span className="text-3xl font-bold text-slate-900 dark:text-white">
                     {typeof activePrice === 'number' ? `$${activePrice.toLocaleString()}` : activePrice}
                 </span>
-                {pkg.originalPrice && !isMuted && !hasVariants && (
+                {pkg.originalPrice && !isMuted && !hasVariants && pkg.sessions !== 6 && (
                     <span className="text-sm text-slate-400 line-through">${pkg.originalPrice.toLocaleString()}</span>
                 )}
             </div>

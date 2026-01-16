@@ -82,7 +82,6 @@ const About: React.FC = () => {
                         {[
                             "25 Years Business Experience | 15 Years Business Owner | 15 Years Integrative Practitioner",
                             "Master of Science (MS) in Counseling | Bachelor of Science (BS) in Marketing",
-                            "Certified Rehabilitation Counselor (CRC) - National Certification",
                             "Trained in Multiple Trauma Modalities | Somatic Experiencing® Practitioner",
                             "Internal Family Systems (IFS) Informed | Polyvagal Theory Trained",
                             "Certified Professional Life Coach & Guide",
