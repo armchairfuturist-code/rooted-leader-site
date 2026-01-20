@@ -6,18 +6,49 @@ const servicesPaths = [
         pathLabel: "PATH 1",
         category: "STRATEGY (START HERE)",
         title: "The Clarity & Insight Session",
-        subtitle: "Strategic Mapping & Direction",
-        intent: "The universal entry point. When you are in the thick of a block, you cannot see the frame. We aim for direction, not full resolution.",
+        subtitle: "Strategic Mapping, Direction & Integrative Coaching",
+        intent: "This is the universal entry point. When you are in the thick of a block, you often cannot see the frame because you are in the picture. This Strategic Coaching Session is designed to provide immediate insight into the nature of your stuckness—distinguishing between a physiological freeze response in your nervous system, a crisis of meaning, or a structural bottleneck in your business. We do not aim for \"full resolution\" in 50 minutes; we aim for deep clarity, accurate mapping, and precise direction.",
         defaultPrice: 300,
         priceLabel: "Single 50-Min Strategy Session",
         perSessionRate: null, // No comparison needed for single session
         savingsLabel: null,
         deepContent: `
-      <h4 class="text-sm font-bold uppercase tracking-widest text-slate-900 dark:text-white mb-2 mt-4">The Experience</h4>
-      <p class="mb-4">I serve as your systemic mirror. I listen to the unspoken undercurrents of your narrative—biological, energetic, and structural—to locate the 'Systemic Knot'.</p>
-      <h4 class="text-sm font-bold uppercase tracking-widest text-slate-900 dark:text-white mb-2 mt-4">The Outcome</h4>
-      <p class="mb-4">You leave with insight into the root of stuckness (Trauma vs Strategy), one actionable tool to claim a small win, and a clear compass for your next steps.</p>
-      <p class="text-sm text-gray-500 italic mt-4">Scope: This is a single consulting session, not an intake for services.</p>
+      <h4 class="text-sm font-bold uppercase tracking-widest text-slate-900 dark:text-white mb-2 mt-4">The Systemic Mirror</h4>
+      <p class="mb-4">I act as a pattern-recognition expert for your life and business. We look at the unspoken architecture of your current reality—assessing the Biological (Nervous System & Capacity), the Essential (Values & Meaning), and the Structural (Career/Systems) layers to locate the "Systemic Knot."</p>
+      
+      <h4 class="text-sm font-bold uppercase tracking-widest text-slate-900 dark:text-white mb-2 mt-4">Source Mapping</h4>
+      <p class="mb-4">We move beyond symptom management to identify the primary driver of your resistance. Is this a capacity deficit requiring Somatic Regulation? A misalignment requiring Mentorship? Or a complex business challenge requiring Strategic Advisory?</p>
+
+      <h4 class="text-sm font-bold uppercase tracking-widest text-slate-900 dark:text-white mb-2 mt-4">The Roadmap</h4>
+      <p class="mb-4">You leave with a clear, honest recommendation for which of my services (Healing, Mentorship, or Advisory) is the precise next step for your needs, along with one immediate somatic or strategic resource to begin shifting the pattern today.</p>
+
+      <h4 class="text-sm font-bold uppercase tracking-widest text-slate-900 dark:text-white mb-2 mt-4">For Business & Advisory Inquiries</h4>
+      <p class="mb-4">This session also serves as the initial deep-dive to scope organizational projects and assess strategic fit.</p>
+
+      <h4 class="text-sm font-bold uppercase tracking-widest text-slate-900 dark:text-white mb-2 mt-4">Who This Is For</h4>
+      <ul class="space-y-2 mb-4">
+        <li class="flex items-start gap-3 text-sm text-slate-600 dark:text-slate-400">
+          <span class="font-bold text-slate-900 dark:text-white min-w-[140px]">The Seeker or High-Achiever:</span>
+          <span>You are navigating burnout, a shift in consciousness, or chronic stress and need to know if the root is physiological or spiritual.</span>
+        </li>
+        <li class="flex items-start gap-3 text-sm text-slate-600 dark:text-slate-400">
+          <span class="font-bold text-slate-900 dark:text-white min-w-[140px]">The Visionary Leader:</span>
+          <span>You are facing a career transition, leadership challenge, or loss of vitality and need a partner to stress-test your thinking.</span>
+        </li>
+        <li class="flex items-start gap-3 text-sm text-slate-600 dark:text-slate-400">
+          <span class="font-bold text-slate-900 dark:text-white min-w-[140px]">The Entrepreneur:</span>
+          <span>You are hitting a business plateau and need to disentangle your nervous system responses from your business operations.</span>
+        </li>
+        <li class="flex items-start gap-3 text-sm text-slate-600 dark:text-slate-400">
+          <span class="font-bold text-slate-900 dark:text-white min-w-[140px]">The Organization:</span>
+          <span>You are seeking High-Level Advisory and need to define the scope of the engagement.</span>
+        </li>
+      </ul>
+
+      <h4 class="text-sm font-bold uppercase tracking-widest text-slate-900 dark:text-white mb-2 mt-4">Investment</h4>
+      <p class="mb-2"><strong>Format:</strong> 50-Minute Video Coaching Strategy Session.</p>
+      <p class="mb-2"><strong>Investment:</strong> $300 (One-Time).</p>
+      <p class="text-sm text-gray-500 italic mt-2">Note: This fee is for the strategy session itself and is separate from future package investments.</p>
     `,
         packages: [], // Single option only
         ctaLink: "https://docs.google.com/forms/d/e/1FAIpQLSdMdvumB1DSyqxR0BfeBqPkB1a1Zuo_mBkX81yzs2AQZEhKBA/viewform"
@@ -186,20 +217,44 @@ const servicesPaths = [
         defaultPrice: "Custom",
         perSessionRate: "Varies",
         deepContent: `
-      <h4 class="text-sm font-bold uppercase tracking-widest text-slate-900 dark:text-white mb-2 mt-4">The Systemic Audit</h4>
-      <p class="mb-4">I look for the "Check Engine Light" in your business or project. Whether it is a stalled launch, a burning-out team, or a safety gap in your product, I identify the root systemic fracture and provide the roadmap to fix it.</p>
-      
-      <h4 class="text-sm font-bold uppercase tracking-widest text-slate-900 dark:text-white mb-2 mt-4">The "Human Element" Strategy</h4>
-      <p class="mb-4">Leveraging my background in Human Psychology and Rehabilitation, I advise on Organizational Design and Neuro-Inclusive Workflows. We structure your business environment to support the diverse nervous systems of your team and yourself, preventing burnout before it starts. <br/><em class="text-xs">Note: This is strategic consulting, not clinical case management.</em></p>
+      <h4 class="text-sm font-bold uppercase tracking-widest text-slate-900 dark:text-white mb-2 mt-4">Services & Scope</h4>
+      <ul class="space-y-2 mb-4">
+        <li class="flex items-start gap-3 text-sm text-slate-600 dark:text-slate-400">
+          <span class="font-bold text-slate-900 dark:text-white min-w-[140px]">Strategic Advisory:</span>
+          <span>High-level mentorship for Founders/CEOs to unstuck bottlenecks and align business strategy with human capacity.</span>
+        </li>
+        <li class="flex items-start gap-3 text-sm text-slate-600 dark:text-slate-400">
+          <span class="font-bold text-slate-900 dark:text-white min-w-[140px]">Systems Consulting:</span>
+          <span>Auditing organizational culture and workflows to reduce burnout and increase psychological safety.</span>
+        </li>
+        <li class="flex items-start gap-3 text-sm text-slate-600 dark:text-slate-400">
+          <span class="font-bold text-slate-900 dark:text-white min-w-[140px]">Speaking & Education:</span>
+          <span>Keynotes and workshops on Trauma-Informed Leadership, Resilience in the Age of AI, and The Nervous System of Organizations.</span>
+        </li>
+      </ul>
 
-      <h4 class="text-sm font-bold uppercase tracking-widest text-slate-900 dark:text-white mb-2 mt-4">Harm Reduction & Safety</h4>
-      <p class="mb-4">For organizations in the Transformational or Wellness space, I design Safety Architectures. I help you build protocols that protect your community and your liability, ensuring your container is as safe as it is expansive.</p>
-
-      <h4 class="text-sm font-bold uppercase tracking-widest text-slate-900 dark:text-white mb-2 mt-4">Integrative Coaching</h4>
-      <p class="mb-4">I do not just consult on the business; I mentor the leader. We ensure your leadership style is congruent with your values and your biological capacity.</p>
+      <h4 class="text-sm font-bold uppercase tracking-widest text-slate-900 dark:text-white mb-2 mt-4">Investment & Engagement Options</h4>
+      <ul class="space-y-3 mb-4">
+        <li class="flex items-start gap-3 text-sm text-slate-600 dark:text-slate-400">
+          <span class="font-bold text-slate-900 dark:text-white min-w-[140px]">1. Initial Strategy Session</span>
+          <span><strong>Investment:</strong> $300 (60 Minutes).<br/><strong>Action:</strong> Book via Path 1 (Clarity & Insight Session).<br/><strong>Purpose:</strong> This is the mandatory deep-dive to scope the project, audit the systemic knot, and assess fit for a larger engagement.</span>
+        </li>
+        <li class="flex items-start gap-3 text-sm text-slate-600 dark:text-slate-400">
+          <span class="font-bold text-slate-900 dark:text-white min-w-[140px]">2. The Advisory Retainer</span>
+          <span><strong>Investment:</strong> $4,500 (10 Hours).<br/><strong>Details:</strong> A "Bank of Hours" for leaders who need a Second Brain on speed dial. Includes priority scheduling and document review. Valid for 3 months.</span>
+        </li>
+        <li class="flex items-start gap-3 text-sm text-slate-600 dark:text-slate-400">
+          <span class="font-bold text-slate-900 dark:text-white min-w-[140px]">3. The Strategic Intensive</span>
+          <span><strong>Investment:</strong> $1,800 (Half-Day / 4 Hours).<br/><strong>Details:</strong> A focused virtual immersion to map a new project, audit a specific workflow, or resolve a crisis.</span>
+        </li>
+        <li class="flex items-start gap-3 text-sm text-slate-600 dark:text-slate-400">
+          <span class="font-bold text-slate-900 dark:text-white min-w-[140px]">4. Project Consulting</span>
+          <span><strong>Investment:</strong> Custom Proposal.<br/><strong>Details:</strong> For medium-term engagements (3–18 months) focusing on implementation and systems change.</span>
+        </li>
+      </ul>
 
       <h4 class="text-sm font-bold uppercase tracking-widest text-slate-900 dark:text-white mb-2 mt-4">Scope of Practice</h4>
-      <p class="mb-4">Systems Change Consulting, Business Advisory, Workplace Stress & Resilience Audits, Harm Reduction Strategy, Integrative Program Design, and Executive/Leadership Coaching.</p>
+      <p class="mb-4">This is Business Consulting, Systems Advisory, and Professional Education.</p>
     `,
         packages: [
             {
@@ -231,7 +286,7 @@ const servicesPaths = [
                 ]
             },
             {
-                sessions: "The Project Line",
+                sessions: "Project Consulting",
                 price: "Custom",
                 label: "Consulting & Management",
                 perSession: "Proposal Based",
