@@ -46,7 +46,7 @@ const Footer: React.FC = () => {
                 </div>
                 
                 <p className="text-xs text-slate-400">
-                    © 2025 The Integrative Counselor, LLC. All rights reserved.<br />
+                    © {new Date().getFullYear()} Shannon Myers Integrative, LLC. All rights reserved.<br />
                     Designed with intention for deep healing and authentic empowerment.
                 </p>
             </div>
