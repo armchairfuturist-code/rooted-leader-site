@@ -7,9 +7,10 @@ const servicesPaths = [
         category: "STRATEGY (START HERE)",
         title: "The Clarity & Insight Session",
         subtitle: "Strategic Mapping, Direction & Integrative Coaching",
-        intent: "This is the universal entry point. When you are in the thick of a block, you often cannot see the frame because you are in the picture. This Strategic Coaching Session is designed to provide immediate insight into the nature of your stuckness—distinguishing between a physiological freeze response in your nervous system, a crisis of meaning, or a structural bottleneck in your business. We do not aim for \"full resolution\" in 50 minutes; we aim for deep clarity, accurate mapping, and precise direction.",
+        duration: "60 min",
+        intent: "This is the universal entry point. When you are in the thick of a block, you often cannot see the frame because you are in the picture. This Strategic Coaching Session is designed to provide immediate insight into the nature of your stuckness—distinguishing between a physiological freeze response in your nervous system, a crisis of meaning, or a structural bottleneck in your business. We do not aim for \"full resolution\" in 60 minutes; we aim for deep clarity, accurate mapping, and precise direction.",
         defaultPrice: 300,
-        priceLabel: "Single 50-Min Strategy Session",
+        priceLabel: "Single 60-Min Strategy Session",
         perSessionRate: null, // No comparison needed for single session
         savingsLabel: null,
         deepContent: `
@@ -46,7 +47,7 @@ const servicesPaths = [
       </ul>
 
       <h4 class="text-sm font-bold uppercase tracking-widest text-slate-900 dark:text-white mb-2 mt-4">Investment</h4>
-      <p class="mb-2"><strong>Format:</strong> 50-Minute Video Coaching Strategy Session.</p>
+      <p class="mb-2"><strong>Format:</strong> 60-Minute Video Coaching Strategy Session.</p>
       <p class="mb-2"><strong>Investment:</strong> $300 (One-Time).</p>
       <p class="text-sm text-gray-500 italic mt-2">Note: This fee is for the strategy session itself and is separate from future package investments.</p>
     `,
@@ -59,6 +60,7 @@ const servicesPaths = [
         category: "INTEGRATIVE SOMATICS",
         title: "Trauma & Chronic Stress Resolution",
         subtitle: "Restoring Biological Safety & Capacity",
+        duration: "50 min",
         intent: "We are not just talking about your history; we are metabolizing it. Trauma and chronic stress live in the nervous system, not the cognitive brain. This path applies neuroscientific somatic tools to resolve Chronic Stress, Complex Trauma, and Developmental Wounds. We focus on metabolizing the physiology of the threat response so you can return to the present moment with restored capacity.",
         defaultPrice: 1500,
         perSessionRate: 250,
@@ -102,6 +104,7 @@ const servicesPaths = [
         category: "INTEGRATION",
         title: "Consciousness Integration & Expanded States",
         subtitle: "Navigating the Unseen & Grounding the Self",
+        duration: "50 min",
         intent: "Engaging with expanded states of consciousness—whether through psychedelics, deep meditation, or spontaneous spiritual awakening—can be destabilizing if not properly grounded. This path bridges the gap between \"The Experience\" and \"Daily Life.\" We use Somatic Experiencing (SE™) to stabilize the nervous system (grounding the voltage) and Integrative Coaching to anchor the insights into your physical reality.",
         defaultPrice: 1500,
         perSessionRate: 250,
@@ -131,6 +134,7 @@ const servicesPaths = [
         category: "ENERGY MEDICINE",
         title: "Energetic Recalibration",
         subtitle: "Subtle Body Architecture & Intuitive Alignment",
+        duration: "50 min",
         intent: "This is deep, restorative work for the subtle body. We go beyond relaxation into the architecture of your energy field. Using my background as a Reiki Master and 5/1 Reflector, I act as a mirror to identify and clear energetic distortion. This path combines high-frequency energy work with Integrative Coaching to teach you how to maintain your own energetic hygiene.",
         defaultPrice: 1500,
         perSessionRate: 250,
@@ -150,6 +154,7 @@ const servicesPaths = [
         category: "MENTORSHIP (THE MASTER CONTAINER)",
         title: "The Authentic & Aligned Self",
         subtitle: "The Polymath Mentorship: Wholeness in a Fragmented World",
+        duration: "50 min",
         intent: "This is the Master Container. We weave every tool in my arsenal to help you embody wholeness. In this space, we do not compartmentalize your health, your spirit, and your work: we treat them as one ecosystem. If a trauma block arises while we are designing your legacy, we resolve it. If a business challenge triggers a spiritual crisis, we integrate it.",
         defaultPrice: 2100,
         perSessionRate: 350,
@@ -213,6 +218,7 @@ const servicesPaths = [
         category: "CORPORATE & ADVISORY",
         title: "Strategic Advisory & Consulting",
         subtitle: "Trauma-Informed Architecture for Visionaries & Organizations",
+        duration: "60 min",
         intent: "Business bottlenecks are often biological problems in disguise. This path offers High-Level Advisory for Visionaries, Entrepreneurs, and Systems Change Agents. I act as a \"Systemic Auditor,\" viewing the complexity of your project through a polymathic lens—integrating 25+ years of executive strategy with deep expertise in human physiology and trauma. We build systems that are not just efficient, but sustainable.",
         defaultPrice: "Custom",
         perSessionRate: "Varies",
@@ -275,21 +281,19 @@ const servicesPaths = [
             },
             {
                 sessions: "Strategic Intensive",
-                price: 1800, // Default to Half-Day
+                price: 1800,
                 label: "Deep-Dive Intensive",
                 perSession: "High-Impact",
-                note: "Select duration above. Best for mapping, auditing, or team training.",
-                save: null,
-                variants: [
-                    { name: "Half-Day", price: 1800, duration: "4 Hours" },
-                    { name: "Full-Day", price: 3000, duration: "7 Hours" }
-                ]
+                duration: "Half Day",
+                note: "A focused virtual immersion to map a new project or audit a workflow.",
+                save: null
             },
             {
                 sessions: "Project Consulting",
                 price: "Custom",
                 label: "Consulting & Management",
                 perSession: "Proposal Based",
+                duration: null,
                 note: "Engagements (3-18 months) for implementation of trauma-informed systems.",
                 save: null
             }
@@ -312,8 +316,9 @@ const PricingTierCard: React.FC<{
     perSessionRate: number | null,
     isMuted?: boolean,
     variantIdx: number,
-    setVariantIdx: (idx: number) => void
-}> = ({ pkg, isSelected, onSelect, perSessionRate, isMuted, variantIdx, setVariantIdx }) => {
+    setVariantIdx: (idx: number) => void,
+    defaultDuration?: string
+}> = ({ pkg, isSelected, onSelect, perSessionRate, isMuted, variantIdx, setVariantIdx, defaultDuration }) => {
     const isBestValue = pkg.bestValue;
     const hasVariants = pkg.variants && pkg.variants.length > 0;
 
@@ -325,7 +330,8 @@ const PricingTierCard: React.FC<{
     const sessionLabel = typeof pkg.sessions === 'string' &&
         (pkg.sessions.toLowerCase().includes('retainer') ||
             pkg.sessions.toLowerCase().includes('strategy') ||
-            pkg.sessions.toLowerCase().includes('intensive'))
+            pkg.sessions.toLowerCase().includes('intensive') ||
+            pkg.sessions.toLowerCase().includes('consulting'))
         ? ''
         : (typeof pkg.sessions === 'number' || !pkg.sessions.toString().toLowerCase().includes('week') ? 'Sessions' : '');
 
@@ -352,15 +358,15 @@ const PricingTierCard: React.FC<{
                 </span>
 
                 {/* Duration Badge or Variant Toggle */}
-                {!hasVariants ? (
+                {!hasVariants && (activeDuration !== null && (activeDuration || defaultDuration)) ? (
                     <span className={`text-[10px] uppercase tracking-wider font-bold px-2 py-0.5 rounded-full 
                         ${isSelected && !isMuted
                             ? 'bg-emerald-100 text-emerald-700'
                             : 'bg-slate-100 dark:bg-slate-800 text-slate-400'
                         }`}>
-                        {activeDuration || '50 min'}
+                        {activeDuration || defaultDuration}
                     </span>
-                ) : (
+                ) : hasVariants ? (
                     <div className="flex bg-slate-200 dark:bg-slate-800 rounded-full p-0.5">
                         {pkg.variants.map((v: any, idx: number) => (
                             <button
@@ -379,7 +385,7 @@ const PricingTierCard: React.FC<{
                             </button>
                         ))}
                     </div>
-                )}
+                ) : null}
             </div>
 
             <div className="flex items-baseline gap-2 mb-2">
@@ -523,6 +529,7 @@ const ServiceCard: React.FC<{ service: any }> = ({ service }) => {
                                     perSessionRate={service.perSessionRate}
                                     variantIdx={variantIdx}
                                     setVariantIdx={setVariantIdx}
+                                    defaultDuration={service.duration}
                                 />
                             ))}
                         </div>
