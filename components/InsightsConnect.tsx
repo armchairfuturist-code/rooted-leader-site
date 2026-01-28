@@ -139,14 +139,30 @@ const InsightsConnect: React.FC = () => {
                             ? dateObj.toLocaleDateString('en-US', { month: 'short', day: 'numeric' })
                             : 'Recent';
 
+                        const contentStr = (item.content || "") + (item.description || "");
+                        const isVideo = item.title.toLowerCase().includes('substack live') ||
+                            item.title.toLowerCase().includes('live session') ||
+                            item.title.toLowerCase().includes('episode') ||
+                            item.link.includes('/live/') ||
+                            contentStr.toLowerCase().includes('watch the full conversation') ||
+                            contentStr.toLowerCase().includes('in this episode') ||
+                            (item.enclosure && (
+                                (item.enclosure.type && item.enclosure.type.includes('video')) ||
+                                (item.enclosure.link && item.enclosure.link.includes('podcast'))
+                            )) ||
+                            (item.categories && item.categories.some((c: string) =>
+                                c.toLowerCase().includes('live') || c.toLowerCase().includes('video')
+                            ));
+
                         return {
-                            category: item.categories && item.categories.length > 0 ? item.categories[0] : "Insight",
+                            category: isVideo ? "Substack Live" : (item.categories && item.categories.length > 0 ? item.categories[0] : "Insight"),
                             title: item.title,
                             excerpt: excerpt,
                             date: dateStr,
-                            readTime: "5 min read",
+                            readTime: isVideo ? "Video Session" : "5 min read",
                             imageUrl: imageUrl,
-                            link: item.link
+                            link: item.link,
+                            isVideo: isVideo
                         };
                     });
 
@@ -193,7 +209,7 @@ const InsightsConnect: React.FC = () => {
                         ) : (
                             posts.map((post) => (
                                 <a key={post.link} href={post.link} target="_blank" rel="noopener noreferrer" className="group block bg-white dark:bg-surface-dark rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition transform hover:-translate-y-1">
-                                    <div className="h-48 overflow-hidden bg-gray-200 dark:bg-gray-800">
+                                    <div className="h-48 overflow-hidden bg-gray-200 dark:bg-gray-800 relative">
                                         <img
                                             src={post.imageUrl}
                                             alt={post.title}
@@ -202,6 +218,13 @@ const InsightsConnect: React.FC = () => {
                                                 (e.target as HTMLImageElement).src = 'https://images.unsplash.com/photo-1499750310159-5b5f09692a6a?auto=format&fit=crop&q=80&w=800';
                                             }}
                                         />
+                                        {post.isVideo && (
+                                            <div className="absolute inset-0 flex items-center justify-center bg-black/20 group-hover:bg-black/40 transition-colors">
+                                                <div className="w-12 h-12 flex items-center justify-center bg-white/20 backdrop-blur-md rounded-full border border-white/30 text-white transform group-hover:scale-110 transition duration-300">
+                                                    <span className="material-icons-outlined text-3xl">play_arrow</span>
+                                                </div>
+                                            </div>
+                                        )}
                                     </div>
                                     <div className="p-6">
                                         <span className="text-xs font-semibold text-primary uppercase tracking-wide">{post.category}</span>

@@ -17,6 +17,7 @@ export interface BlogPost {
     readTime: string;
     imageUrl: string;
     link: string;
+    isVideo?: boolean;
 }
 
 export interface Service {
